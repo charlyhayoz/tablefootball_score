@@ -151,7 +151,8 @@ The control that composer is installed correctly with `composer -V`
 4. Build the docker image and start it : `./vendor/bin/sail up -d`
 5. Generate an application key : `./vendor/bin/sail artisan key:generate`
 6. Generate symlink from assets to the public folder : `./vendor/bin/sail artisan storage:link`
-7. Create the database structure and a basic population : `./vendor/bin/sail artisan migrate:fresh --seed`
+7. Cache the .env file : `./vendor/bin/sail artisan config:cache`
+8. Create the database structure and populate it with data : `./vendor/bin/sail artisan migrate:fresh --seed`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,6 +165,14 @@ Use this space to show useful examples of how a project can be used. Additional 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Debug
+
+### Check data in Database
+
+Use PHPMyAdmin
+
+You can easily check data in the database with [http://localhost:8080/](http://localhost:8080/)
 
 <!-- ROADMAP -->
 
