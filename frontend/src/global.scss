@@ -35,3 +35,29 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+@import "./theme/flex.scss";
+
+.max-wrapper {
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  position:relative;
+  border-radius: 2px;
+}
+
+ion-card {
+  border-radius:30px;
+}
+
+.hover {
+  transition: all 0.5s ease-in;
+
+}
+
+.hover:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+

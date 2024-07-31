@@ -11,7 +11,7 @@ class Player extends Model
 
     public function games()
     {
-        return $this->belongsToMany('App\Models\Game', 'game_player', 'player_id', 'game_id')->withPivot('score', 'id');
+        return $this->belongsToMany('App\Models\Game', 'game_player', 'player_id', 'game_id')->withPivot('score', 'id', 'win');
     }
 
     public function gameplayers()

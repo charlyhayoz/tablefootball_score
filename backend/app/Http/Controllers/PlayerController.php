@@ -21,9 +21,9 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        $players = Player::paginate(15);
+        $players = Player::simplePaginate(15);
         return response()->json(
-            $players,
+            $players->items(),
             200
         );
     }
@@ -105,6 +105,7 @@ class PlayerController extends Controller
      */
     public function destroy(Player $player)
     {
+        $player->games()->delete();
         $player->delete();
 
         return response()->json(

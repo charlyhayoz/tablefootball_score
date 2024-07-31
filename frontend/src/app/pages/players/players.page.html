@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+  <div class="max-wrapper">
+    <h1 class="ion-text-center">Players</h1>
+    <ion-row class="ion-justify-content-center">
+      <ion-col *ngFor="let player of players" size="6" size-md="3">
+        <ion-card class="flex-col-vertical-center">
+          <ion-card-header class="flex-col-vertical-center">
+            <ion-avatar>
+              <img
+                alt="Profile"
+                [src]="services.apiService.getAssetsPath(player.avatar)"
+              />
+            </ion-avatar>
+
+            <ion-card-title class="ion-text-center"
+              >{{player.pseudo}}e</ion-card-title
+            >
+          </ion-card-header>
+
+          <ion-card-content class="flex-col-center">
+            <ion-button
+              (click)="deletePlayer(player)"
+              shape="round"
+              fill="outline"
+              color="danger"
+            >
+              Delete <ion-icon name="trash" slot="end"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-text color="medium" *ngIf="spinner != null && spinner.disabled">
+      <p class="ion-text-center">No more player !</p>
+      <p></p
+    ></ion-text>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="crescent"
+        loadingText="Loading"
+      >
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>

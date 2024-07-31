@@ -1,0 +1,87 @@
+<ion-content [fullscreen]="true">
+  <div class="max-wrapper">
+    <h1 class="ion-text-center">My games</h1>
+
+    <ion-row class="ion-justify-content-center">
+      <ion-col
+        class="flex-col-vertical-center ion-padding"
+        size="6"
+        size-md="3"
+        (click)="createGame()"
+      >
+        <div class="add-card hover flex-col-vertical-center">
+          <ion-icon name="add" size="large"></ion-icon>
+        </div>
+      </ion-col>
+
+      <ion-col *ngFor="let game of games" size="6" size-md="3">
+        <ion-card
+          class="hover flex-col-vertical-center"
+          (click)="editGame(game)"
+        >
+          <ion-icon class="edit-icon" name="pencil"></ion-icon>
+
+          <ion-card-header class="flex-col-vertical-center">
+            <ion-icon size="large" name="football-outline"></ion-icon>
+            <ion-card-title class="ion-text-center"
+              >Game {{game.id}}</ion-card-title
+            >
+            <ion-card-subtitle
+              color="{{game.status=='finished'?'white':'warning'}}"
+              class="ion-text-center ion-text-capitalize"
+              >{{game.status}}</ion-card-subtitle
+            >
+            <ion-card-subtitle class="ion-text-center"
+              >{{game.created_at | date:'dd.MM.yyyy HH:mm' }}</ion-card-subtitle
+            >
+          </ion-card-header>
+
+          <ion-card-content class="flex-col-center">
+            <ion-item lines="none" *ngFor="let player of game.players">
+              <ion-avatar slot="start">
+                <img
+                  alt="Profile"
+                  [src]="services.apiService.getAssetsPath(player.avatar)"
+                />
+              </ion-avatar>
+              <ion-label
+                [color]="player.pivot!.win! == 1?'success':'white'"
+                class="player-name"
+              >
+                {{player.pseudo}}
+              </ion-label>
+              <ion-label
+                [color]="player.pivot!.win! == 1?'success':'white'"
+                slot="end"
+              >
+                {{player.pivot!.score!}}
+              </ion-label>
+            </ion-item>
+            <ion-button
+              class="ion-margin-top"
+              (click)="deleteGame(game)"
+              shape="round"
+              fill="outline"
+              color="danger"
+            >
+              Delete <ion-icon name="trash" slot="end"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-text color="medium" *ngIf="spinner != null && spinner.disabled">
+      <p class="ion-text-center">No more game !</p>
+      <p></p
+    ></ion-text>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="crescent"
+        loadingText="Loading"
+      >
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>

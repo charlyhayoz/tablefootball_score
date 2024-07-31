@@ -5,14 +5,14 @@ namespace App\Helper;
 class Avatar
 {
   const LIST = [
-    'storage/image/avatars/astronaut',
-    'storage/image/avatars/bear',
-    'storage/image/avatars/chicken',
-    'storage/image/avatars/dog',
-    'storage/image/avatars/fox',
-    'storage/image/avatars/meerkat',
-    'storage/image/avatars/panda',
-    'storage/image/avatars/rabbit'
+    'storage/images/avatars/astronaut.png',
+    'storage/images/avatars/bear.png',
+    'storage/images/avatars/chicken.png',
+    'storage/images/avatars/dog.png',
+    'storage/images/avatars/fox.png',
+    'storage/images/avatars/meerkat.png',
+    'storage/images/avatars/panda.png',
+    'storage/images/avatars/rabbit.png'
   ];
 
 
