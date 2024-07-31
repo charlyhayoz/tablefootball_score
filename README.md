@@ -140,13 +140,6 @@ The control that composer is installed correctly with `composer -V`
 
 ### Installation
 
-#### Front-end
-
-1. Change the directory : `cd frontend`
-2. Install the dependencies : `npm install`
-
-#### Back-end
-
 1. Change the directory : `cd backend`
 2. Install the dependencies : `composer install`
 3. Set the env file from the .env.example : `cp .env.example .env`
@@ -155,6 +148,16 @@ The control that composer is installed correctly with `composer -V`
 6. Generate symlink from assets to the public folder : `./vendor/bin/sail artisan storage:link`
 7. Cache the .env file : `./vendor/bin/sail artisan config:cache`
 8. Create the database structure and populate it with data : `./vendor/bin/sail artisan migrate:fresh --seed`
+9. You can now access the whole application on your [localhost](http://localhost)
+
+#### (Front-end)
+
+The front-end is already builded in the public directory.
+
+1. Change the directory : `cd frontend`
+2. Install the Ionic CLI globally with : `npm install -g @ionic/cli`
+3. Install the dependencies : `npm install`
+4. Start the server with : `ionic serve`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,6 +170,18 @@ Use this space to show useful examples of how a project can be used. Additional 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Frontend
+
+#### Build the application
+
+The application is builded in the public folder of the backend for an easy access.
+
+For that first, build the application with `ng build --configuration production --base-href /app/`
+
+The application is then builded in the `frontend/www` folder.
+
+Then, copy all the file to the `backend/public/app` folder with the command : `cp -r www/* ../backend/public/app`
 
 ### Backend
 
