@@ -1,0 +1,43 @@
+name: Statistics
+description: |-
+
+  API endpoints for retrieving the statistics
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/statistics
+    metadata:
+      groupName: Statistics
+      groupDescription: |-
+
+        API endpoints for retrieving the statistics
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Return the statistics for all the players'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"pseudo":"Sasha Harber","games_played":7,"games_winned":3,"games_losed":4,"goals_out":44,"goals_in":59,"games_ratio":0.42857142857142855,"goals_difference":-15}]'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

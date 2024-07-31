@@ -95,6 +95,8 @@ Are you a table football addict ? So maybe you find hard to keep scores of your 
 #### Back-end
 
 - [![Laravel][Laravel.com]][Laravel-url]
+  - With [knuckleswtf/scribe](https://scribe.knuckles.wtf/laravel) for the automatic documentation
+  - With [php-ai/php-ml](https://php-ml.readthedocs.io/en/latest/) for the machine learning
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,9 +168,37 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Debug
+### Backend
 
-### Check data in Database
+#### Automatic documentation
+
+The documentation is generated with [Scribe](https://scribe.knuckles.wtf/laravel).
+
+Document each of your controller with the following model :
+`/\*\*
+
+- @group Game management
+-
+- APIs for managing games
+  \*/`
+
+And the document each of your function with the following model :
+`
+/**
+     * Store a new game and return it. (Description)
+     * @queryParam id integer required The id of the game
+     * @bodyParam status string required The status of the game. (`finished`or`waiting`). Example: finished, waiting
+     * @response {"status":"finished","updated_at":"2024-07-31T11:00:28.000000Z","created_at":"2024-07-31T11:00:28.000000Z","id":102}
+     */
+ `
+
+And then, regenerate the documentation with : `./vendor/bin/sail artisan scribe:generate`
+
+Your documentation will be then disponible on the endpoint `/docs`
+
+#### Debug
+
+##### Check data in Database
 
 Use PHPMyAdmin
 

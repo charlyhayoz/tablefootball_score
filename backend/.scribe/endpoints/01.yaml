@@ -1,0 +1,276 @@
+name: 'Player management'
+description: |-
+
+  API endpoints for managing the player
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/player
+    metadata:
+      groupName: 'Player management'
+      groupDescription: |-
+
+        API endpoints for managing the player
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of all the players.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      page:
+        name: page
+        description: 'Each page contain 15 games'
+        required: true
+        example: 7
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      page: 7
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"current_page":1,"data":[{"id":1,"pseudo":"Wendell Jacobi","avatar":"storage\/image\/avatars\/rabbit","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":2,"pseudo":"Dr. Modesto Lakin DDS","avatar":"storage\/image\/avatars\/panda","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":3,"pseudo":"Delores Boyle","avatar":"storage\/image\/avatars\/chicken","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":4,"pseudo":"Osbaldo Emard","avatar":"storage\/image\/avatars\/fox","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":5,"pseudo":"Toni Watsica","avatar":"storage\/image\/avatars\/dog","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":6,"pseudo":"Miss Aletha Koepp V","avatar":"storage\/image\/avatars\/astronaut","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":7,"pseudo":"Mariela Emard","avatar":"storage\/image\/avatars\/bear","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":8,"pseudo":"Blanca King","avatar":"storage\/image\/avatars\/dog","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":9,"pseudo":"Darron Hayes","avatar":"storage\/image\/avatars\/bear","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":10,"pseudo":"Meaghan Prosacco PhD","avatar":"storage\/image\/avatars\/dog","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":11,"pseudo":"Dr. Reanna Batz","avatar":"storage\/image\/avatars\/rabbit","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":12,"pseudo":"Greyson Luettgen","avatar":"storage\/image\/avatars\/dog","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":13,"pseudo":"Jaylan Stehr","avatar":"storage\/image\/avatars\/meerkat","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":14,"pseudo":"Jaqueline Marks","avatar":"storage\/image\/avatars\/meerkat","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":15,"pseudo":"Miss Myrna Johns","avatar":"storage\/image\/avatars\/chicken","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/player?page=1","from":1,"last_page":2,"last_page_url":"http:\/\/localhost\/api\/player?page=2","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/player?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/player?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/player?page=2","label":"Next &raquo;","active":false}],"next_page_url":"http:\/\/localhost\/api\/player?page=2","path":"http:\/\/localhost\/api\/player","per_page":15,"prev_page_url":null,"to":15,"total":20}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/player
+    metadata:
+      groupName: 'Player management'
+      groupDescription: |-
+
+        API endpoints for managing the player
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a new player and return it.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      pseudo:
+        name: pseudo
+        description: 'The pseudo of the player, max 255 characters.'
+        required: true
+        example: ludicrous
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanBodyParameters:
+      pseudo: ludicrous
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"pseudo":"terminator","avatar":"storage\/image\/avatars\/dog","updated_at":"2024-07-31T11:16:16.000000Z","created_at":"2024-07-31T11:16:16.000000Z","id":21}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/player/{id}'
+    metadata:
+      groupName: 'Player management'
+      groupDescription: |-
+
+        API endpoints for managing the player
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a specific player.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the player.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters:
+      id:
+        name: id
+        description: 'The id of the player'
+        required: true
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      id: 19
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"pseudo":"terminator","avatar":"storage\/image\/avatars\/dog","updated_at":"2024-07-31T11:16:16.000000Z","created_at":"2024-07-31T11:16:16.000000Z","id":21}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/player/{id}'
+    metadata:
+      groupName: 'Player management'
+      groupDescription: |-
+
+        API endpoints for managing the player
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update a player and return the new version of it it.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the player.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      pseudo:
+        name: pseudo
+        description: 'The pseudo of the player, max 255 characters.'
+        required: true
+        example: ludicrous
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanBodyParameters:
+      pseudo: ludicrous
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"pseudo":"terminator","avatar":"storage\/image\/avatars\/dog","updated_at":"2024-07-31T11:16:16.000000Z","created_at":"2024-07-31T11:16:16.000000Z","id":21}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/player/{id}'
+    metadata:
+      groupName: 'Player management'
+      groupDescription: |-
+
+        API endpoints for managing the player
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete the specified player and return it.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the player.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters:
+      id:
+        name: id
+        description: 'The id of the game'
+        required: true
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      id: 11
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"pseudo":"terminator","avatar":"storage\/image\/avatars\/dog","updated_at":"2024-07-31T11:16:16.000000Z","created_at":"2024-07-31T11:16:16.000000Z","id":21}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

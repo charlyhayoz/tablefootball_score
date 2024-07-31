@@ -1,0 +1,366 @@
+name: 'Game management'
+description: |-
+
+  API endpoints for managing the game
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/game
+    metadata:
+      groupName: 'Game management'
+      groupDescription: |-
+
+        API endpoints for managing the game
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of all the games.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      page:
+        name: page
+        description: 'Each page contain 15 games'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      page: 1
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"current_page":1,"data":[{"id":1,"status":"finished","created_at":"2024-07-22T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":2,"status":"finished","created_at":"2024-07-25T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":3,"status":"finished","created_at":"2024-07-29T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":4,"status":"finished","created_at":"2024-07-22T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":5,"status":"finished","created_at":"2024-07-20T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":6,"status":"finished","created_at":"2024-07-28T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":7,"status":"finished","created_at":"2024-07-28T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":8,"status":"finished","created_at":"2024-07-23T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":9,"status":"finished","created_at":"2024-07-29T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":10,"status":"finished","created_at":"2024-07-29T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":11,"status":"finished","created_at":"2024-07-23T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":12,"status":"finished","created_at":"2024-07-21T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":13,"status":"finished","created_at":"2024-07-26T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":14,"status":"finished","created_at":"2024-07-28T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":15,"status":"finished","created_at":"2024-07-24T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/game?page=1","from":1,"last_page":7,"last_page_url":"http:\/\/localhost\/api\/game?page=7","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/game?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/game?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/game?page=3","label":"3","active":false},{"url":"http:\/\/localhost\/api\/game?page=4","label":"4","active":false},{"url":"http:\/\/localhost\/api\/game?page=5","label":"5","active":false},{"url":"http:\/\/localhost\/api\/game?page=6","label":"6","active":false},{"url":"http:\/\/localhost\/api\/game?page=7","label":"7","active":false},{"url":"http:\/\/localhost\/api\/game?page=2","label":"Next &raquo;","active":false}],"next_page_url":"http:\/\/localhost\/api\/game?page=2","path":"http:\/\/localhost\/api\/game","per_page":15,"prev_page_url":null,"to":15,"total":100}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/game
+    metadata:
+      groupName: 'Game management'
+      groupDescription: |-
+
+        API endpoints for managing the game
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a new game and return it.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      status:
+        name: status
+        description: 'The status of the game. (`finished` or `waiting`).'
+        required: true
+        example: 'finished, waiting'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanBodyParameters:
+      status: 'finished, waiting'
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":"finished","updated_at":"2024-07-31T11:00:28.000000Z","created_at":"2024-07-31T11:00:28.000000Z","id":102}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/game/{id}'
+    metadata:
+      groupName: 'Game management'
+      groupDescription: |-
+
+        API endpoints for managing the game
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a specific game.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the game.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters:
+      id:
+        name: id
+        description: 'The id of the game'
+        required: true
+        example: 8
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      id: 8
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"id":1,"status":"finished","created_at":"2024-07-22T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","players":[{"id":2,"pseudo":"Dr. Modesto Lakin DDS","avatar":"storage\/image\/avatars\/panda","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","pivot":{"game_id":1,"player_id":2,"score":10,"win":1}},{"id":13,"pseudo":"Jaylan Stehr","avatar":"storage\/image\/avatars\/meerkat","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","pivot":{"game_id":1,"player_id":13,"score":8,"win":0}}]}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/game/{id}'
+    metadata:
+      groupName: 'Game management'
+      groupDescription: |-
+
+        API endpoints for managing the game
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified game and return the edited version.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the game.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters:
+      id:
+        name: id
+        description: 'The id of the game'
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player1_id:
+        name: player1_id
+        description: 'The id of the first player'
+        required: true
+        example: 8
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player2_id:
+        name: player2_id
+        description: 'The id of the second player'
+        required: true
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player1_score:
+        name: player1_score
+        description: 'The score of the first player. Min : 0, Max : 10'
+        required: false
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player2_score:
+        name: player2_score
+        description: 'The score of the second player. Min : 0, Max : 10'
+        required: false
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      id: 6
+      player1_id: 8
+      player2_id: 14
+      player1_score: 19
+      player2_score: 4
+    bodyParameters:
+      status:
+        name: status
+        description: 'The status of the game. (`finished` or `waiting`).'
+        required: true
+        example: 'finished, waiting'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      player1_id:
+        name: player1_id
+        description: ''
+        required: true
+        example: 2606.102
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player2_id:
+        name: player2_id
+        description: ''
+        required: true
+        example: 40.8925483
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player1_score:
+        name: player1_score
+        description: 'Must be at least 0. Must not be greater than 10.'
+        required: false
+        example: 10
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player2_score:
+        name: player2_score
+        description: 'Must be at least 0. Must not be greater than 10.'
+        required: false
+        example: 9
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      status: 'finished, waiting'
+      player1_id: 2606.102
+      player2_id: 40.8925483
+      player1_score: 10
+      player2_score: 9
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"id":1,"status":"finished","created_at":"2024-07-22T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","players":[{"id":2,"pseudo":"Dr. Modesto Lakin DDS","avatar":"storage\/image\/avatars\/panda","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","pivot":{"game_id":1,"player_id":2,"score":10,"win":1}},{"id":13,"pseudo":"Jaylan Stehr","avatar":"storage\/image\/avatars\/meerkat","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","pivot":{"game_id":1,"player_id":13,"score":8,"win":0}}]}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/game/{id}'
+    metadata:
+      groupName: 'Game management'
+      groupDescription: |-
+
+        API endpoints for managing the game
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete the specified game and return it.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the game.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters:
+      id:
+        name: id
+        description: 'The id of the game'
+        required: true
+        example: 3
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      id: 3
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":"finished","updated_at":"2024-07-31T11:00:28.000000Z","created_at":"2024-07-31T11:00:28.000000Z","id":102}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -30,7 +30,7 @@ class GameFactory extends Factory
                 'score' => rand(0, 9),
                 'player_id' => $player->random()->id,
                 'game_id' => $game->id,
-                'win' => 0
+                'win' => -1
             ]);
         });
     }

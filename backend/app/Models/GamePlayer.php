@@ -7,21 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class GamePlayer extends Model
 {
-    protected $table = 'game_player';
+  protected $table = 'game_player';
 
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = [
-        'score', 'win', 'game_id', 'player_id'
-    ];
+  protected $fillable = [
+    'score', 'win', 'game_id', 'player_id'
+  ];
 
-    public function game()
-    {
-        return $this->belongsTo('App\Models\Game', 'game_id', 'id');
-    }
+  public function game()
+  {
+    return $this->belongsTo('App\Models\Game', 'game_id', 'id');
+  }
 
-    public function player()
-    {
-        return $this->belongsTo('App\Models\Player', 'player_id', 'id');
-    }
+  public function player()
+  {
+    return $this->belongsTo('App\Models\Player', 'player_id', 'id');
+  }
 }

@@ -8,5 +8,5 @@ Route::resources([
 ]);
 
 Route::prefix('/statistics')->group(function () {
-  Route::post('/', [App\Http\Controllers\StatisticsController::class, 'getStatistics']);
+  Route::get('/', [App\Http\Controllers\StatisticsController::class, 'getStatistics']);
 });

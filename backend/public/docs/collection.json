@@ -1,0 +1,558 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Football score documentation",
+        "_postman_id": "6f5dc22a-07e2-4fb2-98b2-9c9a6bc55ba7",
+        "description": "All the APIs endpoints documentation explained",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Game management",
+            "description": "\nAPI endpoints for managing the game",
+            "item": [
+                {
+                    "name": "Display a listing of all the games.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/game",
+                            "query": [
+                                {
+                                    "key": "page",
+                                    "value": "1",
+                                    "description": "Each page contain 15 games",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/game?page=1"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"current_page\":1,\"data\":[{\"id\":1,\"status\":\"finished\",\"created_at\":\"2024-07-22T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":2,\"status\":\"finished\",\"created_at\":\"2024-07-25T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":3,\"status\":\"finished\",\"created_at\":\"2024-07-29T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":4,\"status\":\"finished\",\"created_at\":\"2024-07-22T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":5,\"status\":\"finished\",\"created_at\":\"2024-07-20T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":6,\"status\":\"finished\",\"created_at\":\"2024-07-28T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":7,\"status\":\"finished\",\"created_at\":\"2024-07-28T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":8,\"status\":\"finished\",\"created_at\":\"2024-07-23T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":9,\"status\":\"finished\",\"created_at\":\"2024-07-29T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":10,\"status\":\"finished\",\"created_at\":\"2024-07-29T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":11,\"status\":\"finished\",\"created_at\":\"2024-07-23T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":12,\"status\":\"finished\",\"created_at\":\"2024-07-21T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":13,\"status\":\"finished\",\"created_at\":\"2024-07-26T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":14,\"status\":\"finished\",\"created_at\":\"2024-07-28T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":15,\"status\":\"finished\",\"created_at\":\"2024-07-24T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=1\",\"from\":1,\"last_page\":7,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=7\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=3\",\"label\":\"3\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=4\",\"label\":\"4\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=5\",\"label\":\"5\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=6\",\"label\":\"6\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=7\",\"label\":\"7\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=2\",\"path\":\"http:\\\/\\\/localhost\\\/api\\\/game\",\"per_page\":15,\"prev_page_url\":null,\"to\":15,\"total\":100}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a new game and return it.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/game",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/game"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"status\":\"finished, waiting\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"finished\",\"updated_at\":\"2024-07-31T11:00:28.000000Z\",\"created_at\":\"2024-07-31T11:00:28.000000Z\",\"id\":102}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a specific game.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/game\/:id",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "8",
+                                    "description": "The id of the game",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/game\/:id?id=8",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the game."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"id\":1,\"status\":\"finished\",\"created_at\":\"2024-07-22T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"players\":[{\"id\":2,\"pseudo\":\"Dr. Modesto Lakin DDS\",\"avatar\":\"storage\\\/image\\\/avatars\\\/panda\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"pivot\":{\"game_id\":1,\"player_id\":2,\"score\":10,\"win\":1}},{\"id\":13,\"pseudo\":\"Jaylan Stehr\",\"avatar\":\"storage\\\/image\\\/avatars\\\/meerkat\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"pivot\":{\"game_id\":1,\"player_id\":13,\"score\":8,\"win\":0}}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified game and return the edited version.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/game\/:id",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "6",
+                                    "description": "The id of the game",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "player1_id",
+                                    "value": "8",
+                                    "description": "The id of the first player",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "player2_id",
+                                    "value": "14",
+                                    "description": "The id of the second player",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "player1_score",
+                                    "value": "19",
+                                    "description": "The score of the first player. Min : 0, Max : 10",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "player2_score",
+                                    "value": "4",
+                                    "description": "The score of the second player. Min : 0, Max : 10",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/game\/:id?id=6&player1_id=8&player2_id=14&player1_score=19&player2_score=4",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the game."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"status\":\"finished, waiting\",\"player1_id\":2606.102,\"player2_id\":40.8925483,\"player1_score\":10,\"player2_score\":9}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"id\":1,\"status\":\"finished\",\"created_at\":\"2024-07-22T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"players\":[{\"id\":2,\"pseudo\":\"Dr. Modesto Lakin DDS\",\"avatar\":\"storage\\\/image\\\/avatars\\\/panda\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"pivot\":{\"game_id\":1,\"player_id\":2,\"score\":10,\"win\":1}},{\"id\":13,\"pseudo\":\"Jaylan Stehr\",\"avatar\":\"storage\\\/image\\\/avatars\\\/meerkat\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"pivot\":{\"game_id\":1,\"player_id\":13,\"score\":8,\"win\":0}}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete the specified game and return it.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/game\/:id",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "3",
+                                    "description": "The id of the game",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/game\/:id?id=3",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the game."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"status\":\"finished\",\"updated_at\":\"2024-07-31T11:00:28.000000Z\",\"created_at\":\"2024-07-31T11:00:28.000000Z\",\"id\":102}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Player management",
+            "description": "\nAPI endpoints for managing the player",
+            "item": [
+                {
+                    "name": "Display a listing of all the players.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/player",
+                            "query": [
+                                {
+                                    "key": "page",
+                                    "value": "7",
+                                    "description": "Each page contain 15 games",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/player?page=7"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"current_page\":1,\"data\":[{\"id\":1,\"pseudo\":\"Wendell Jacobi\",\"avatar\":\"storage\\\/image\\\/avatars\\\/rabbit\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":2,\"pseudo\":\"Dr. Modesto Lakin DDS\",\"avatar\":\"storage\\\/image\\\/avatars\\\/panda\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":3,\"pseudo\":\"Delores Boyle\",\"avatar\":\"storage\\\/image\\\/avatars\\\/chicken\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":4,\"pseudo\":\"Osbaldo Emard\",\"avatar\":\"storage\\\/image\\\/avatars\\\/fox\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":5,\"pseudo\":\"Toni Watsica\",\"avatar\":\"storage\\\/image\\\/avatars\\\/dog\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":6,\"pseudo\":\"Miss Aletha Koepp V\",\"avatar\":\"storage\\\/image\\\/avatars\\\/astronaut\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":7,\"pseudo\":\"Mariela Emard\",\"avatar\":\"storage\\\/image\\\/avatars\\\/bear\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":8,\"pseudo\":\"Blanca King\",\"avatar\":\"storage\\\/image\\\/avatars\\\/dog\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":9,\"pseudo\":\"Darron Hayes\",\"avatar\":\"storage\\\/image\\\/avatars\\\/bear\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":10,\"pseudo\":\"Meaghan Prosacco PhD\",\"avatar\":\"storage\\\/image\\\/avatars\\\/dog\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":11,\"pseudo\":\"Dr. Reanna Batz\",\"avatar\":\"storage\\\/image\\\/avatars\\\/rabbit\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":12,\"pseudo\":\"Greyson Luettgen\",\"avatar\":\"storage\\\/image\\\/avatars\\\/dog\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":13,\"pseudo\":\"Jaylan Stehr\",\"avatar\":\"storage\\\/image\\\/avatars\\\/meerkat\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":14,\"pseudo\":\"Jaqueline Marks\",\"avatar\":\"storage\\\/image\\\/avatars\\\/meerkat\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":15,\"pseudo\":\"Miss Myrna Johns\",\"avatar\":\"storage\\\/image\\\/avatars\\\/chicken\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/player?page=1\",\"from\":1,\"last_page\":2,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/player?page=2\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/player?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/player?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/player?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/player?page=2\",\"path\":\"http:\\\/\\\/localhost\\\/api\\\/player\",\"per_page\":15,\"prev_page_url\":null,\"to\":15,\"total\":20}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a new player and return it.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/player",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/player"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"pseudo\":\"ludicrous\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"pseudo\":\"terminator\",\"avatar\":\"storage\\\/image\\\/avatars\\\/dog\",\"updated_at\":\"2024-07-31T11:16:16.000000Z\",\"created_at\":\"2024-07-31T11:16:16.000000Z\",\"id\":21}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a specific player.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/player\/:id",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "19",
+                                    "description": "The id of the player",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/player\/:id?id=19",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the player."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"pseudo\":\"terminator\",\"avatar\":\"storage\\\/image\\\/avatars\\\/dog\",\"updated_at\":\"2024-07-31T11:16:16.000000Z\",\"created_at\":\"2024-07-31T11:16:16.000000Z\",\"id\":21}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update a player and return the new version of it it.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/player\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/player\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the player."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"pseudo\":\"ludicrous\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"pseudo\":\"terminator\",\"avatar\":\"storage\\\/image\\\/avatars\\\/dog\",\"updated_at\":\"2024-07-31T11:16:16.000000Z\",\"created_at\":\"2024-07-31T11:16:16.000000Z\",\"id\":21}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete the specified player and return it.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/player\/:id",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "11",
+                                    "description": "The id of the game",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/player\/:id?id=11",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the player."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"pseudo\":\"terminator\",\"avatar\":\"storage\\\/image\\\/avatars\\\/dog\",\"updated_at\":\"2024-07-31T11:16:16.000000Z\",\"created_at\":\"2024-07-31T11:16:16.000000Z\",\"id\":21}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Statistics",
+            "description": "\nAPI endpoints for retrieving the statistics",
+            "item": [
+                {
+                    "name": "Return the statistics for all the players",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/statistics",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/statistics"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "[{\"pseudo\":\"Sasha Harber\",\"games_played\":7,\"games_winned\":3,\"games_losed\":4,\"goals_out\":44,\"goals_in\":59,\"games_ratio\":0.42857142857142855,\"goals_difference\":-15}]",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
