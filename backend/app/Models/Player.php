@@ -4,18 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Player extends Model
 {
     use HasFactory;
 
-    public function games()
+    public function gamesplayer1()
     {
-        return $this->belongsToMany('App\Models\Game', 'game_player', 'player_id', 'game_id')->withPivot('score', 'id', 'win');
+        return $this->hasMany('App\Models\Game', 'player1_id', 'id');
+    }
+    public function gamesplayer2()
+    {
+        return $this->hasMany('App\Models\Game', 'player2_id', 'id');
     }
 
-    public function gameplayers()
+    public function getGamesAttribute()
     {
-        return $this->hasMany('App\Models\GamePlayer', 'player_id', 'id');
+        return $this->gamesplayer1->concat($this->gamesplayer2);
     }
 }

@@ -1,0 +1,19 @@
+
+
+.modal-default
+{
+  --border-radius: 30px !important;
+  overflow: hidden;
+  --background: var(--ion-background-color-step-100) !important;
+}
+
+.modal-default ion-content {
+  --background:transparent;
+
+  h1 {
+    margin-left:65px;
+    margin-right:65px;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+}

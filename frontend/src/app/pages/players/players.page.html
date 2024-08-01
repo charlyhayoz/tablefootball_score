@@ -1,23 +1,44 @@
 <ion-content [fullscreen]="true">
+  <ion-fab vertical="top" horizontal="end" slot="fixed" *ngIf="type=='modal'">
+    <ion-fab-button color="white" size="small" (click)="dismiss()">
+      <ion-icon name="close"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
   <div class="max-wrapper">
     <h1 class="ion-text-center">Players</h1>
     <ion-row class="ion-justify-content-center">
+      <ion-col
+        class="flex-col-vertical-center ion-padding"
+        size="6"
+        size-md="3"
+        (click)="createPlayer()"
+      >
+        <div class="add-card hover flex-col-vertical-center">
+          <ion-icon name="add" size="large"></ion-icon>
+        </div>
+      </ion-col>
+
       <ion-col *ngFor="let player of players" size="6" size-md="3">
-        <ion-card class="flex-col-vertical-center">
+        <ion-card
+          class="flex-col-vertical-center"
+          [class.hover]="type=='modal'"
+          (click)="dismiss(player)"
+        >
           <ion-card-header class="flex-col-vertical-center">
             <ion-avatar>
               <img
                 alt="Profile"
-                [src]="services.apiService.getAssetsPath(player.avatar)"
+                [src]="services.apiService.getAssetsPath(player.avatar!)"
               />
             </ion-avatar>
 
             <ion-card-title class="ion-text-center"
-              >{{player.pseudo}}e</ion-card-title
+              >{{player.pseudo}}</ion-card-title
             >
           </ion-card-header>
 
-          <ion-card-content class="flex-col-center">
+          <ion-card-content class="flex-col-center" *ngIf="type != 'modal'">
             <ion-button
               (click)="deletePlayer(player)"
               shape="round"
@@ -35,6 +56,15 @@
       <p class="ion-text-center">No more player !</p>
       <p></p
     ></ion-text>
+
+    <div
+      *ngIf="players && players.length == 0"
+      class="all-width ion-text-center ion-margin"
+    >
+      <ion-text color="medium" class="ion-text-center"
+        >No player to show</ion-text
+      >
+    </div>
 
     <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
       <ion-infinite-scroll-content

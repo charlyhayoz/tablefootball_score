@@ -1,12 +1,8 @@
 import { Game } from './game';
-import { Gameplayer } from './gameplayer';
 
 export interface Player {
-  id: number;
+  id?: number;
   pseudo: string;
-  avatar: string;
-  created_at: string;
-  games?: Game[];
-  gameplayers?: Gameplayer[];
-  pivot?: Gameplayer;
+  avatar?: string;
+  created_at?: string;
 }

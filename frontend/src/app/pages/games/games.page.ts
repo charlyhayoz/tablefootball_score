@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Services } from 'src/app/services/services.service';
 import { Game } from 'src/app/models/game';
+import { EditGamePage } from './modals/edit-game/edit-game.page';
+import { CreateGamePage } from './modals/create-game/create-game.page';
 @Component({
   selector: 'app-games',
   templateUrl: './games.page.html',
@@ -18,9 +20,35 @@ export class GamesPage implements OnInit {
     this.getGames();
   }
 
-  createGame() {}
+  async createGame() {
+    const modal = await this.services.modalController.create({
+      component: CreateGamePage,
+      componentProps: {},
+    });
+    modal.present();
 
-  editGame(game: Game) {}
+    const { data, role } = await modal.onWillDismiss();
+    if (role === 'data') {
+      console.log(data);
+      this.games.unshift(data);
+      this.editGame(data);
+    }
+  }
+
+  async editGame(game: Game) {
+    const modal = await this.services.modalController.create({
+      component: EditGamePage,
+      componentProps: {
+        game: game,
+      },
+    });
+    modal.present();
+
+    const { data, role } = await modal.onWillDismiss();
+    if (role === 'data') {
+      game = data;
+    }
+  }
 
   async deleteGame(game: Game) {
     const alert = await this.services.alertController.create({
@@ -40,6 +68,8 @@ export class GamesPage implements OnInit {
             this.services.apiService
               .delete<Game>('game/' + game.id)
               .subscribe((game: Game) => {
+                this.services.utilsService.presentToast('Game deleted');
+
                 this.games = this.games.filter((_game) => _game.id != game.id);
               });
           },

@@ -1,0 +1,20 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height:100%;
+  .middle {
+    flex-grow:1;
+  }
+}
+
+h1 {
+  border-bottom:2px solid white;
+}
+
+
+ion-button {
+  color:white;
+}
+

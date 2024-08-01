@@ -1,1 +1,70 @@
-<ion-content [fullscreen]="true"> </ion-content>
+<ion-content [fullscreen]="true">
+  <div class="max-wrapper">
+    <h1 class="ion-text-center">Statistics</h1>
+    <ng-container *ngIf="statistics_data">
+      <div class="all-width flex-col-center">
+        <div>
+          <ion-select
+            aria-label="Sort"
+            value="{{sorting}}"
+            toggleIcon="filter"
+            (ionChange)="sortChange($event)"
+          >
+            <ion-select-option value="wins">Wins</ion-select-option>
+            <ion-select-option value="loss">Loss</ion-select-option>
+            <ion-select-option value="ratio">Ratio</ion-select-option>
+            <ion-select-option value="difference"
+              >Goals difference</ion-select-option
+            >
+          </ion-select>
+        </div>
+      </div>
+
+      <ion-row class="header ion-margin-top">
+        <ion-col size="1" class="flex-col-center"> Rank </ion-col>
+        <ion-col size="3" class="flex-col-center"> Player name </ion-col>
+        <ion-col size="1" class="flex-col-center"> Game played </ion-col>
+        <ion-col size="1" class="flex-col-center"> Wins </ion-col>
+        <ion-col size="1" class="flex-col-center"> Loss </ion-col>
+        <ion-col size="2" class="flex-col-center">
+          Ratio (Games Played / Win)
+        </ion-col>
+        <ion-col size="1" class="flex-col-center"> Goals For </ion-col>
+        <ion-col size="1" class="flex-col-center"> Goals Against </ion-col>
+        <ion-col size="1" class="flex-col-center"> Goals Difference </ion-col>
+      </ion-row>
+      <div class="all-width ion-text-center ion-margin">
+        <ion-text
+          color="medium"
+          class="ion-text-center"
+          *ngIf="statistics_data.length == 0"
+          >No player to show</ion-text
+        >
+      </div>
+      <ion-row
+        class="data-row"
+        *ngFor="let line of statistics_data; let i = index"
+      >
+        <ion-col size="1" class="ion-text-center"> {{i+1}} </ion-col>
+        <ion-col size="3"> {{line.pseudo}} </ion-col>
+        <ion-col size="1" class="ion-text-center">
+          {{line.games_played}}
+        </ion-col>
+        <ion-col size="1" class="ion-text-center">
+          {{line.games_winned}}
+        </ion-col>
+        <ion-col size="1" class="ion-text-center">
+          {{line.games_losed}}
+        </ion-col>
+        <ion-col size="2" class="ion-text-center">
+          {{line.games_ratio}}
+        </ion-col>
+        <ion-col size="1" class="ion-text-center"> {{line.goals_out}} </ion-col>
+        <ion-col size="1" class="ion-text-center"> {{line.goals_in}} </ion-col>
+        <ion-col size="1" class="ion-text-center">
+          {{line.goals_difference}}
+        </ion-col>
+      </ion-row>
+    </ng-container>
+  </div>
+</ion-content>

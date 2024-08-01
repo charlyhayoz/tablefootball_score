@@ -37,6 +37,8 @@
 @import "@ionic/angular/css/palettes/dark.system.css";
 
 @import "./theme/flex.scss";
+@import "./theme/toast.scss";
+@import "./theme/modal.scss";
 
 .max-wrapper {
   max-width: 950px;
@@ -61,3 +63,24 @@ ion-card {
   transform: scale(1.01);
 }
 
+
+ion-list {
+  background: transparent !important;
+}
+
+ion-item {
+  --background: transparent;
+}
+
+
+ion-list-header {
+  background-color: var(--ion-color-primary);
+}
+
+.item-error {
+  --background: var(--ion-color-danger);
+}
+
+.all-width {
+  width:100%;
+}

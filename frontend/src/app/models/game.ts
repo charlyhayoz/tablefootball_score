@@ -1,9 +1,12 @@
-import { Gameplayer } from './gameplayer';
 import { Player } from './player';
 export interface Game {
-  id: number;
+  id?: number;
   status: string;
-  created_at: string;
-  players?: Player[];
-  gameplayers?: Gameplayer[];
+  player1_id: number;
+  player2_id: number;
+  player1_score: number;
+  player2_score: number;
+  created_at?: string;
+  player1?: Player;
+  player2?: Player;
 }

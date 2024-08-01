@@ -9,13 +9,15 @@ class Game extends Model
 {
     use HasFactory;
 
-    public function players()
+
+
+    public function player1()
     {
-        return $this->belongsToMany('App\Models\Player', 'game_player', 'game_id', 'player_id')->withPivot('score', 'id', 'win');
+        return $this->belongsTo('App\Models\Player', 'player1_id', 'id');
     }
 
-    public function gameplayers()
+    public function player2()
     {
-        return $this->hasMany('App\Models\GamePlayer', 'game_id', 'id');
+        return $this->belongsTo('App\Models\Player', 'player2_id', 'id');
     }
 }

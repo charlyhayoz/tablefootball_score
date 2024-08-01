@@ -37,24 +37,44 @@
           </ion-card-header>
 
           <ion-card-content class="flex-col-center">
-            <ion-item lines="none" *ngFor="let player of game.players">
+            <ion-item lines="none">
               <ion-avatar slot="start">
                 <img
                   alt="Profile"
-                  [src]="services.apiService.getAssetsPath(player.avatar)"
+                  [src]="services.apiService.getAssetsPath(game.player1!.avatar!)"
                 />
               </ion-avatar>
               <ion-label
-                [color]="player.pivot!.win! == 1?'success':'white'"
+                [color]="game.player1_score == 10?'success':'white'"
                 class="player-name"
               >
-                {{player.pseudo}}
+                {{game.player1!.pseudo}}
               </ion-label>
               <ion-label
-                [color]="player.pivot!.win! == 1?'success':'white'"
+                [color]="game.player1_score == 10?'success':'white'"
                 slot="end"
               >
-                {{player.pivot!.score!}}
+                {{game.player1_score}}
+              </ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <img
+                  alt="Profile"
+                  [src]="services.apiService.getAssetsPath(game.player2!.avatar!)"
+                />
+              </ion-avatar>
+              <ion-label
+                [color]="game.player2_score == 10?'success':'white'"
+                class="player-name"
+              >
+                {{game.player2!.pseudo}}
+              </ion-label>
+              <ion-label
+                [color]="game.player2_score == 10?'success':'white'"
+                slot="end"
+              >
+                {{game.player2_score}}
               </ion-label>
             </ion-item>
             <ion-button
@@ -70,6 +90,15 @@
         </ion-card>
       </ion-col>
     </ion-row>
+
+    <div
+      *ngIf="games && games.length == 0"
+      class="all-width ion-text-center ion-margin"
+    >
+      <ion-text color="medium" class="ion-text-center"
+        >No game to show</ion-text
+      >
+    </div>
 
     <ion-text color="medium" *ngIf="spinner != null && spinner.disabled">
       <p class="ion-text-center">No more game !</p>

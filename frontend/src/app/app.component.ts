@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from './services/api.service';
 import { Services } from './services/services.service';
+import { UtilsService } from './services/utils.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,12 @@ import { Services } from './services/services.service';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private apiService: ApiService, private services: Services) {
+  constructor(
+    private apiService: ApiService,
+    private services: Services,
+    private utilsService: UtilsService
+  ) {
     services.apiService = apiService;
+    services.utilsService = utilsService;
   }
 }

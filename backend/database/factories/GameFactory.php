@@ -13,28 +13,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class GameFactory extends Factory
 {
-    public function configure(): static
-    {
-        return $this->afterMaking(function (Game $game) {
-            // ...
-        })->afterCreating(function (Game $game) {
-            $player = \App\Models\Player::all();
-
-            GamePlayer::factory()->create([
-                'score' => 10,
-                'player_id' => $player->random()->id,
-                'game_id' => $game->id,
-                'win' => 1
-            ]);
-            GamePlayer::factory()->create([
-                'score' => rand(0, 9),
-                'player_id' => $player->random()->id,
-                'game_id' => $game->id,
-                'win' => -1
-            ]);
-        });
-    }
-
     /**
      * Define the model's default state.
      *
@@ -42,8 +20,18 @@ class GameFactory extends Factory
      */
     public function definition(): array
     {
+        $player = \App\Models\Player::all();
+        $player1 = $player->random();
+        $player = $player->filter(function ($item) use ($player1) {
+            return $item->id != $player1->id;
+        });
+
         return [
             'status' => GameStatus::FINISHED,
+            'player1_id' => $player1->id,
+            'player2_id' => $player->random()->id,
+            'player1_score' => 10,
+            'player2_score' => rand(0, 9),
             'created_at' =>  Carbon::now()->subDays(rand(0, 10)),
         ];
     }

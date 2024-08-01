@@ -1,0 +1,79 @@
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button color="white" size="small" (click)="dismiss()">
+      <ion-icon name="close"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div class="container">
+    <h1 class="ion-text-center bold">New game</h1>
+    <ion-list>
+      <ion-item>
+        <ion-select
+          [(ngModel)]="status"
+          label="Status"
+          placeholder="Choose status"
+        >
+          <ion-select-option value="finished">Finished</ion-select-option>
+          <ion-select-option value="waiting">Waiting</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-list-header>
+        <ion-label>Players</ion-label>
+      </ion-list-header>
+
+      <ion-item
+        [class.item-error]="touched && player1 == null"
+        button
+        (click)="assignPlayer(1)"
+      >
+        <ng-container *ngIf="player1!= null">
+          <ion-avatar slot="start">
+            <img
+              alt="Profile"
+              [src]="services.apiService.getAssetsPath(player1!.avatar!)"
+            />
+          </ion-avatar>
+          <ion-label class="player-name"> {{player1!.pseudo}} </ion-label>
+        </ng-container>
+        <ng-container *ngIf="player1== null">
+          <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+          <ion-label class="player-name"> Assign player 1 </ion-label>
+        </ng-container>
+        <ion-icon slot="end" name="create-outline"></ion-icon>
+      </ion-item>
+
+      <ion-item
+        [class.item-error]="touched && player2 == null"
+        button
+        (click)="assignPlayer(2)"
+      >
+        <ng-container *ngIf="player2!= null">
+          <ion-avatar slot="start">
+            <img
+              alt="Profile"
+              [src]="services.apiService.getAssetsPath(player2!.avatar!)"
+            />
+          </ion-avatar>
+          <ion-label class="player-name"> {{player2!.pseudo}} </ion-label>
+        </ng-container>
+        <ng-container *ngIf="player2== null">
+          <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+          <ion-label class="player-name"> Assign player 2 </ion-label>
+        </ng-container>
+        <ion-icon slot="end" name="create-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+
+    <div class="all-width ion-text-center">
+      <ion-button
+        (click)="storeGame()"
+        [disabled]="player1 == null || player2 == null"
+        shape="round"
+        size="large"
+      >
+        Save
+        <ion-icon slot="end" name="save-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

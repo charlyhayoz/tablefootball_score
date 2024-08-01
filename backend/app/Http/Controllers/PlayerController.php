@@ -21,7 +21,7 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        $players = Player::simplePaginate(15);
+        $players = Player::orderBy('id', 'DESC')->simplePaginate(15);
         return response()->json(
             $players->items(),
             200

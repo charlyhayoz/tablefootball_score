@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: GamesPage
+  },
+  {
+    path: 'edit-game',
+    loadChildren: () => import('./modals/edit-game/edit-game.module').then( m => m.EditGamePageModule)
+  },
+  {
+    path: 'create-game',
+    loadChildren: () => import('./modals/create-game/create-game.module').then( m => m.CreateGamePageModule)
   }
 ];
 

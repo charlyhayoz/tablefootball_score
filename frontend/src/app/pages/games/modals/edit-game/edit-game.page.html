@@ -1,0 +1,71 @@
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button color="white" size="small" (click)="dismiss()">
+      <ion-icon name="close"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div class="container" *ngIf="game != null">
+    <h1 class="ion-text-center bold">Game {{game.id}}</h1>
+    <ion-list>
+      <ion-item>
+        <ion-select
+          [(ngModel)]="game.status"
+          label="Status"
+          placeholder="Choose status"
+        >
+          <ion-select-option value="finished">Finished</ion-select-option>
+          <ion-select-option value="waiting">Waiting</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-list-header>
+        <ion-label>Score</ion-label>
+      </ion-list-header>
+
+      <div class="container-score">
+        <ion-item button (click)="assignPlayer(1)">
+          <ion-avatar slot="start">
+            <img
+              alt="Profile"
+              [src]="services.apiService.getAssetsPath(game.player1!.avatar!)"
+            />
+          </ion-avatar>
+          <ion-label class="player-name">
+            {{game.player1!.pseudo}} ({{game.player1_score}})
+          </ion-label>
+          <ion-icon slot="end" name="create-outline"></ion-icon>
+        </ion-item>
+        <div class="score flex-col-center">
+          <div
+            class="point hover"
+            *ngFor="let point of scoreArray; let i = index;"
+            [class.filled-point-player]="i+1 <= game.player1_score"
+            (click)="game.player1_score = i+1"
+          ></div>
+        </div>
+      </div>
+
+      <div class="container-score">
+        <ion-item button (click)="assignPlayer(2)">
+          <ion-avatar slot="start">
+            <img
+              alt="Profile"
+              [src]="services.apiService.getAssetsPath(game.player2!.avatar!)"
+            />
+          </ion-avatar>
+          <ion-label class="player-name">
+            {{game.player2!.pseudo}} ({{game.player2_score}})
+          </ion-label>
+          <ion-icon slot="end" name="create-outline"></ion-icon>
+        </ion-item>
+        <div class="score flex-col-center">
+          <div
+            class="point hover"
+            *ngFor="let point of scoreArray; let i = index;"
+            [class.filled-point-player]="i+1 <= game.player2_score"
+            (click)="game.player2_score = i+1"
+          ></div>
+        </div>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
