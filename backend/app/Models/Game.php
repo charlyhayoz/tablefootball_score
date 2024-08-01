@@ -9,8 +9,6 @@ class Game extends Model
 {
     use HasFactory;
 
-
-
     public function player1()
     {
         return $this->belongsTo('App\Models\Player', 'player1_id', 'id');
