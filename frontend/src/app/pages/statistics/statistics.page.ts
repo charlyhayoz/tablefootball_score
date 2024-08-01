@@ -21,7 +21,6 @@ export class StatisticsPage implements OnInit {
     this.services.apiService
       .get<any>('statistics')
       .subscribe((statistics: any) => {
-        console.log(statistics);
         this.statistics_data = statistics;
         this.sort(this.sorting);
       });

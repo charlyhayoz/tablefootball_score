@@ -48,8 +48,6 @@ export class CreateGamePage implements OnInit {
 
     const { data } = await modal.onWillDismiss();
     if (data != null) {
-      console.log(data);
-
       if (playerId == 1) {
         this.player1 = data;
       } else {

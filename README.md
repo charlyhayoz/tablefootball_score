@@ -64,7 +64,7 @@
 
 [![Video of presentation](https://github.com/charlyhayoz/tablefootball_score/blob/main/screenshots/videoImage.png?raw=true)](https://youtu.be/LFZM726dNMA)
 
-Are you a table football addict ? So maybe you find hard to keep scores of your multiple games. This project will help you to keep track, see statistics and even have some prediction with machine-learning.
+Are you a table football addict ? So maybe you find hard to keep scores of your multiple games. This project will help you to keep track of games, players and see statistics.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,9 +124,19 @@ Are you a table football addict ? So maybe you find hard to keep scores of your 
 
 ### Prerequisites
 
+#### Required
+
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white)](https://www.docker.com/)
+
+Docker will be used by the backend with multiples images.
+
+Follow the documentation here for installing Docker : [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/).
+
+#### Optional
+
 [![Node.JS](https://img.shields.io/badge/Node.JS-5Fa04E?style=for-the-badge&logo=Node.js&logoColor=white)](https://nodejs.org/en)
 
-[Node.JS](https://nodejs.org/en) will be use for managing the dependencies for the front-end. More precisely NPM.
+[Node.JS](https://nodejs.org/en) will be use for managing the dependencies for the front-end. More precisely NPM. It's optional as the front-end is already builded.
 
 The best way to install [Node.JS](https://nodejs.org/en) is to use [NVM](https://github.com/nvm-sh/nvm) that will permit you to manage multiple version of Node.js.
 
@@ -136,30 +146,22 @@ Then verify with `nvm -v` that the installation was correct.
 
 If yes, you can install the latest long-term-version(LTS) of Node.js with `nvm install 20.16.0`
 
+Don't forget to activate this version with : `nvm use 20.16.0`
+
 Then verify than Node.JS & NPM is correctly installed with `node -v` and `npm -v`
-
-[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
-
-[PHP 8.2](https://www.php.net/) will be used as the main language for the back-end.
-
-For installing it, execute `sudo apt install php libapache2-mod-php`
-
-[![Composer](https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=php&logoColor=white)](https://getcomposer.org/download/)
-
-[Composer](https://getcomposer.org/) will be use for managing the dependencies for the back-end.
-
-For installing it, you need first to have PHP installed. Then download the installation file with `php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`
-
-Execute it with `php composer-setup.php`
-
-And finally we remove it `php -r "unlink('composer-setup.php');"`
-
-The control that composer is installed correctly with `composer -V`
 
 ### Installation
 
 1. Change the directory : `cd backend`
-2. Install the dependencies : `composer install`
+2. Install the dependencies by starting a mini docker environment :
+   ```
+   docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php83-composer:latest \
+    composer install --ignore-platform-reqs
+   ```
 3. Set the env file from the .env.example : `cp .env.example .env`
 4. Build the docker image and start it : `./vendor/bin/sail up -d`
 5. Generate an application key : `./vendor/bin/sail artisan key:generate`
@@ -167,14 +169,15 @@ The control that composer is installed correctly with `composer -V`
 7. Cache the .env file : `./vendor/bin/sail artisan config:cache`
 8. Create the database structure and populate it with data : `./vendor/bin/sail artisan migrate:fresh --seed`
 9. You can now access the whole application on your [localhost](http://localhost) as the frontend is prebuilded
+10. The API documentation is accessible on [localhost/docs](http://localhost/docs)
 
-#### (Front-end)
+#### Front-end in standalone
 
-In case, if you want to execute the frontend in standalone or for development purpose
+In case if you want to execute the frontend in standalone or for development purpose
 
 1. Change the directory : `cd frontend`
-2. Install the Ionic CLI globally with : `npm install -g @ionic/cli` (Dont forget to have the right version of node.js selected on nvm)
-3. Install the dependencies : `npm install`
+2. Install the Ionic CLI globally with : `npm install -g @ionic/cli` (Dont forget to have the right version of node.js selected on nvm `nvm use 20.16.0`)
+3. Install the dependencies : `npm install --legacy-peer-deps`
 4. Start the front-end server with : `ionic serve`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -195,7 +198,7 @@ For that first go in the frontend directory `cd frontend`, build the application
 
 The application is then builded in the `frontend/www` folder.
 
-Then, copy all the file to the `backend/public/app` folder with the command : `cp -r www/* ../backend/public/app`
+Then, copy all the file from it to `backend/public/app` folder with the command : `cp -r www/* ../backend/public/app`
 
 #### Creating new page
 
@@ -211,7 +214,7 @@ You can easily create new page with `ionic g service services/the_name_of_your_s
 
 ##### Fresh migration
 
-With seeding : `sail artisan migrate:fresh --seed`
+With seeding (auto-population) : `sail artisan migrate:fresh --seed`
 Without seeding: `sail artisan migrate:fresh`
 
 ##### Add a migration
@@ -222,7 +225,7 @@ Rollback the last migration : `sail artisan migrate:rollback --step=1`
 
 ##### Check data in Database
 
-Use PHPMyAdmin
+Docker create automatically a image with PHPMyAdmin for debugging.
 
 You can easily check data in the database with [http://localhost:8080/](http://localhost:8080/)
 
@@ -248,7 +251,7 @@ Policy is very important for controlling the access in your controller to a reso
 
 The documentation is generated with [Scribe](https://scribe.knuckles.wtf/laravel).
 
-Document each of your controller with the following model :
+Document each of your controller at the top with the following model :
 `/\*\*
 
 - @group Game management
@@ -256,7 +259,7 @@ Document each of your controller with the following model :
 - APIs for managing games
   \*/`
 
-And the document each of your function with the following model :
+And then, document inside the controller each of your function with the following model :
 `
 /**
      * Store a new game and return it. (Description)
@@ -268,7 +271,7 @@ And the document each of your function with the following model :
 
 And then, regenerate the documentation with : `./vendor/bin/sail artisan scribe:generate`
 
-Your documentation will be then disponible on the endpoint [http://localhost/docs](http://localhost/docs)
+Your documentation will be then available on the endpoint [http://localhost/docs](http://localhost/docs)
 
 <!-- ROADMAP -->
 
@@ -304,6 +307,7 @@ Some resources useful for this project
 
 - [API documentation (local)](http://localhost/docs)
 - [Laravel documentation](https://laravel.com/docs/11.x/readme)
+- [Scribe documentation](https://scribe.knuckles.wtf/laravel/)
 - [Ionic documentation](https://ionicframework.com/docs)
 - [Ionic Icons](https://ionic.io/ionicons)
 - [Img Shields](https://shields.io)

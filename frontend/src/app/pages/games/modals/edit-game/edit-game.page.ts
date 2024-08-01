@@ -35,8 +35,6 @@ export class EditGamePage implements OnInit {
 
     const { data } = await modal.onWillDismiss();
     if (data != null) {
-      console.log(data);
-
       if (playerId == 1) {
         this.game.player1 = data;
         this.game.player1_id = data.id;

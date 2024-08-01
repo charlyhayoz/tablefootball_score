@@ -142,8 +142,6 @@ export class PlayersPage implements OnInit {
     this.services.apiService
       .get<Player[]>('player?page=' + this.page)
       .subscribe((players: Player[]) => {
-        console.log(players);
-
         if (this.players == null) {
           this.players = players;
         } else {

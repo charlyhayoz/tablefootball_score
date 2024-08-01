@@ -29,7 +29,6 @@ export class GamesPage implements OnInit {
 
     const { data, role } = await modal.onWillDismiss();
     if (role === 'data') {
-      console.log(data);
       this.games.unshift(data);
       this.editGame(data);
     }
@@ -84,8 +83,6 @@ export class GamesPage implements OnInit {
     this.services.apiService
       .get<Game[]>('game?page=' + this.page)
       .subscribe((games: Game[]) => {
-        console.log(games);
-
         if (this.games == null) {
           this.games = games;
         } else {
