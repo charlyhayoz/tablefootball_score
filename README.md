@@ -252,22 +252,25 @@ Policy is very important for controlling the access in your controller to a reso
 The documentation is generated with [Scribe](https://scribe.knuckles.wtf/laravel).
 
 Document each of your controller at the top with the following model :
-`/\*\*
 
+```
+/**
 - @group Game management
 -
 - APIs for managing games
-  \*/`
+*/
+```
 
 And then, document inside the controller each of your function with the following model :
-`
+
+```
 /**
-     * Store a new game and return it. (Description)
-     * @queryParam id integer required The id of the game
-     * @bodyParam status string required The status of the game. (`finished`or`waiting`). Example: finished, waiting
-     * @response {"status":"finished","updated_at":"2024-07-31T11:00:28.000000Z","created_at":"2024-07-31T11:00:28.000000Z","id":102}
-     */
- `
+* Store a new game and return it. (Description)
+* @queryParam id integer required The id of the game
+* @bodyParam status string required The status of the game. (`finished`or`waiting`). Example: finished, waiting
+* @response {"status":"finished","updated_at":"2024-07-31T11:00:28.000000Z","created_at":"2024-07-31T11:00:28.000000Z","id":102}
+*/
+```
 
 And then, regenerate the documentation with : `./vendor/bin/sail artisan scribe:generate`
 
