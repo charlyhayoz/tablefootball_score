@@ -148,11 +148,11 @@ The control that composer is installed correctly with `composer -V`
 6. Generate symlink from assets to the public folder : `./vendor/bin/sail artisan storage:link`
 7. Cache the .env file : `./vendor/bin/sail artisan config:cache`
 8. Create the database structure and populate it with data : `./vendor/bin/sail artisan migrate:fresh --seed`
-9. You can now access the whole application on your [localhost](http://localhost)
+9. You can now access the whole application on your [localhost](http://localhost) as the frontend is prebuilded
 
 #### (Front-end)
 
-The front-end is already builded in the public directory.
+In case, if you want to execute the frontend in standalone
 
 1. Change the directory : `cd frontend`
 2. Install the Ionic CLI globally with : `npm install -g @ionic/cli`
@@ -177,7 +177,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 The application is builded in the public folder of the backend for an easy access.
 
-For that first, build the application with `ng build --configuration production --base-href /app/`
+For that first go in the frontend directory `cd frontend`, build the application with `ng build --configuration production --base-href /app/`
 
 The application is then builded in the `frontend/www` folder.
 
@@ -223,15 +223,8 @@ You can easily check data in the database with [http://localhost:8080/](http://l
 
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-  - [ ] Chinese
-  - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+- [ ] Add translation
+- [ ] Add machine learning for prediction
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -256,7 +249,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the Apache License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -264,9 +257,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Charly Hayoz - [charlyhayoz.ch](https://charlyhayoz.ch)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/charlyhayoz/tablefootball_score](https://github.com/charlyhayoz/tablefootball_score)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

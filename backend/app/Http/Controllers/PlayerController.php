@@ -105,7 +105,9 @@ class PlayerController extends Controller
      */
     public function destroy(Player $player)
     {
-        $player->games()->delete();
+        $player->gamesplayer1()->delete();
+        $player->gamesplayer2()->delete();
+
         $player->delete();
 
         return response()->json(

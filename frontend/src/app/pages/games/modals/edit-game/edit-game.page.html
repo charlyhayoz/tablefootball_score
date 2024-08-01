@@ -38,7 +38,7 @@
           <div
             class="point hover"
             *ngFor="let point of scoreArray; let i = index;"
-            [class.filled-point-player]="i+1 <= game.player1_score"
+            [class.filled-point-player1]="i+1 <= game.player1_score"
             (click)="game.player1_score = i+1"
           ></div>
         </div>
@@ -61,7 +61,7 @@
           <div
             class="point hover"
             *ngFor="let point of scoreArray; let i = index;"
-            [class.filled-point-player]="i+1 <= game.player2_score"
+            [class.filled-point-player2]="i+1 <= game.player2_score"
             (click)="game.player2_score = i+1"
           ></div>
         </div>
