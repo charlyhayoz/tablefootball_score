@@ -17,322 +17,337 @@ paths:
           in: query
           name: page
           description: 'Each page contain 15 games'
-          example: 1
+          example: 9
           required: true
           schema:
             type: integer
             description: 'Each page contain 15 games'
-            example: 1
+            example: 9
       responses:
         200:
           description: ''
           content:
             application/json:
               schema:
-                type: object
+                type: array
+                items:
+                  type: object
                 example:
-                  current_page: 1
-                  data:
-                    -
-                      id: 1
-                      status: finished
-                      created_at: '2024-07-22T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
-                      id: 2
-                      status: finished
-                      created_at: '2024-07-25T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
-                      id: 3
-                      status: finished
-                      created_at: '2024-07-29T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
-                      id: 4
-                      status: finished
-                      created_at: '2024-07-22T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
+                  -
+                    id: 1
+                    status: finished
+                    player1_id: 5
+                    player2_id: 4
+                    player1_score: 10
+                    player2_score: 7
+                    created_at: '2024-07-23T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
                       id: 5
-                      status: finished
-                      created_at: '2024-07-20T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
-                      id: 6
-                      status: finished
-                      created_at: '2024-07-28T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
-                      id: 7
-                      status: finished
-                      created_at: '2024-07-28T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
+                      pseudo: 'Miss Ena Thiel'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 4
+                      pseudo: 'Mike Pouros'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 2
+                    status: finished
+                    player1_id: 8
+                    player2_id: 6
+                    player1_score: 10
+                    player2_score: 2
+                    created_at: '2024-07-30T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
                       id: 8
-                      status: finished
-                      created_at: '2024-07-23T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
-                      id: 9
-                      status: finished
-                      created_at: '2024-07-29T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
-                      id: 10
-                      status: finished
-                      created_at: '2024-07-29T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
+                      pseudo: 'Dr. Mckenna Rosenbaum V'
+                      avatar: storage/images/avatars/chicken.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 6
+                      pseudo: 'Era Rath Jr.'
+                      avatar: storage/images/avatars/meerkat.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 3
+                    status: finished
+                    player1_id: 5
+                    player2_id: 11
+                    player1_score: 10
+                    player2_score: 4
+                    created_at: '2024-07-27T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 5
+                      pseudo: 'Miss Ena Thiel'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
                       id: 11
-                      status: finished
-                      created_at: '2024-07-23T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
-                      id: 12
-                      status: finished
-                      created_at: '2024-07-21T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
-                      id: 13
-                      status: finished
-                      created_at: '2024-07-26T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
+                      pseudo: 'Melissa Bruen'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 4
+                    status: finished
+                    player1_id: 16
+                    player2_id: 11
+                    player1_score: 10
+                    player2_score: 1
+                    created_at: '2024-07-29T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 16
+                      pseudo: 'Alek Stracke MD'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 11
+                      pseudo: 'Melissa Bruen'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 5
+                    status: finished
+                    player1_id: 18
+                    player2_id: 20
+                    player1_score: 10
+                    player2_score: 4
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 18
+                      pseudo: 'Mr. Lee Willms I'
+                      avatar: storage/images/avatars/panda.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 20
+                      pseudo: "Polly O'Connell III"
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 6
+                    status: finished
+                    player1_id: 20
+                    player2_id: 16
+                    player1_score: 10
+                    player2_score: 8
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 20
+                      pseudo: "Polly O'Connell III"
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 16
+                      pseudo: 'Alek Stracke MD'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 7
+                    status: finished
+                    player1_id: 2
+                    player2_id: 10
+                    player1_score: 10
+                    player2_score: 9
+                    created_at: '2024-07-29T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 2
+                      pseudo: 'Mr. Steve Schaefer'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 10
+                      pseudo: 'Hector Wiza'
+                      avatar: storage/images/avatars/chicken.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 8
+                    status: finished
+                    player1_id: 11
+                    player2_id: 20
+                    player1_score: 10
+                    player2_score: 9
+                    created_at: '2024-07-22T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 11
+                      pseudo: 'Melissa Bruen'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 20
+                      pseudo: "Polly O'Connell III"
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 9
+                    status: finished
+                    player1_id: 2
+                    player2_id: 5
+                    player1_score: 10
+                    player2_score: 7
+                    created_at: '2024-07-25T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 2
+                      pseudo: 'Mr. Steve Schaefer'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 5
+                      pseudo: 'Miss Ena Thiel'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 10
+                    status: finished
+                    player1_id: 16
+                    player2_id: 5
+                    player1_score: 10
+                    player2_score: 3
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 16
+                      pseudo: 'Alek Stracke MD'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 5
+                      pseudo: 'Miss Ena Thiel'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 11
+                    status: finished
+                    player1_id: 7
+                    player2_id: 2
+                    player1_score: 10
+                    player2_score: 8
+                    created_at: '2024-07-22T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 7
+                      pseudo: 'Harold Smith'
+                      avatar: storage/images/avatars/astronaut.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 2
+                      pseudo: 'Mr. Steve Schaefer'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 12
+                    status: finished
+                    player1_id: 2
+                    player2_id: 5
+                    player1_score: 10
+                    player2_score: 8
+                    created_at: '2024-07-22T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 2
+                      pseudo: 'Mr. Steve Schaefer'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 5
+                      pseudo: 'Miss Ena Thiel'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 13
+                    status: finished
+                    player1_id: 4
+                    player2_id: 14
+                    player1_score: 10
+                    player2_score: 9
+                    created_at: '2024-07-28T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 4
+                      pseudo: 'Mike Pouros'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
                       id: 14
-                      status: finished
-                      created_at: '2024-07-28T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                    -
-                      id: 15
-                      status: finished
-                      created_at: '2024-07-24T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                  first_page_url: 'http://localhost/api/game?page=1'
-                  from: 1
-                  last_page: 7
-                  last_page_url: 'http://localhost/api/game?page=7'
-                  links:
-                    -
-                      url: null
-                      label: '&laquo; Previous'
-                      active: false
-                    -
-                      url: 'http://localhost/api/game?page=1'
-                      label: '1'
-                      active: true
-                    -
-                      url: 'http://localhost/api/game?page=2'
-                      label: '2'
-                      active: false
-                    -
-                      url: 'http://localhost/api/game?page=3'
-                      label: '3'
-                      active: false
-                    -
-                      url: 'http://localhost/api/game?page=4'
-                      label: '4'
-                      active: false
-                    -
-                      url: 'http://localhost/api/game?page=5'
-                      label: '5'
-                      active: false
-                    -
-                      url: 'http://localhost/api/game?page=6'
-                      label: '6'
-                      active: false
-                    -
-                      url: 'http://localhost/api/game?page=7'
-                      label: '7'
-                      active: false
-                    -
-                      url: 'http://localhost/api/game?page=2'
-                      label: 'Next &raquo;'
-                      active: false
-                  next_page_url: 'http://localhost/api/game?page=2'
-                  path: 'http://localhost/api/game'
-                  per_page: 15
-                  prev_page_url: null
-                  to: 15
-                  total: 100
-                properties:
-                  current_page:
-                    type: integer
-                    example: 1
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        status: finished
-                        created_at: '2024-07-22T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 2
-                        status: finished
-                        created_at: '2024-07-25T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 3
-                        status: finished
-                        created_at: '2024-07-29T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 4
-                        status: finished
-                        created_at: '2024-07-22T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 5
-                        status: finished
-                        created_at: '2024-07-20T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 6
-                        status: finished
-                        created_at: '2024-07-28T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 7
-                        status: finished
-                        created_at: '2024-07-28T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 8
-                        status: finished
-                        created_at: '2024-07-23T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 9
-                        status: finished
-                        created_at: '2024-07-29T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 10
-                        status: finished
-                        created_at: '2024-07-29T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 11
-                        status: finished
-                        created_at: '2024-07-23T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 12
-                        status: finished
-                        created_at: '2024-07-21T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 13
-                        status: finished
-                        created_at: '2024-07-26T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 14
-                        status: finished
-                        created_at: '2024-07-28T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                      -
-                        id: 15
-                        status: finished
-                        created_at: '2024-07-24T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        status:
-                          type: string
-                          example: finished
-                        created_at:
-                          type: string
-                          example: '2024-07-22T13:49:30.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2024-07-30T13:49:30.000000Z'
-                  first_page_url:
-                    type: string
-                    example: 'http://localhost/api/game?page=1'
-                  from:
-                    type: integer
-                    example: 1
-                  last_page:
-                    type: integer
-                    example: 7
-                  last_page_url:
-                    type: string
-                    example: 'http://localhost/api/game?page=7'
-                  links:
-                    type: array
-                    example:
-                      -
-                        url: null
-                        label: '&laquo; Previous'
-                        active: false
-                      -
-                        url: 'http://localhost/api/game?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: 'http://localhost/api/game?page=2'
-                        label: '2'
-                        active: false
-                      -
-                        url: 'http://localhost/api/game?page=3'
-                        label: '3'
-                        active: false
-                      -
-                        url: 'http://localhost/api/game?page=4'
-                        label: '4'
-                        active: false
-                      -
-                        url: 'http://localhost/api/game?page=5'
-                        label: '5'
-                        active: false
-                      -
-                        url: 'http://localhost/api/game?page=6'
-                        label: '6'
-                        active: false
-                      -
-                        url: 'http://localhost/api/game?page=7'
-                        label: '7'
-                        active: false
-                      -
-                        url: 'http://localhost/api/game?page=2'
-                        label: 'Next &raquo;'
-                        active: false
-                    items:
-                      type: object
-                      properties:
-                        url:
-                          type: string
-                          example: null
-                        label:
-                          type: string
-                          example: '&laquo; Previous'
-                        active:
-                          type: boolean
-                          example: false
-                  next_page_url:
-                    type: string
-                    example: 'http://localhost/api/game?page=2'
-                  path:
-                    type: string
-                    example: 'http://localhost/api/game'
-                  per_page:
-                    type: integer
-                    example: 15
-                  prev_page_url:
-                    type: string
-                    example: null
-                  to:
-                    type: integer
-                    example: 15
-                  total:
-                    type: integer
-                    example: 100
+                      pseudo: 'Prof. Austen Satterfield'
+                      avatar: storage/images/avatars/chicken.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 14
+                    status: finished
+                    player1_id: 18
+                    player2_id: 16
+                    player1_score: 10
+                    player2_score: 8
+                    created_at: '2024-07-28T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 18
+                      pseudo: 'Mr. Lee Willms I'
+                      avatar: storage/images/avatars/panda.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 16
+                      pseudo: 'Alek Stracke MD'
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                  -
+                    id: 15
+                    status: finished
+                    player1_id: 20
+                    player2_id: 1
+                    player1_score: 10
+                    player2_score: 4
+                    created_at: '2024-07-24T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:42.000000Z'
+                    player1:
+                      id: 20
+                      pseudo: "Polly O'Connell III"
+                      avatar: storage/images/avatars/bear.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
+                    player2:
+                      id: 1
+                      pseudo: 'Ms. Mara Lubowitz'
+                      avatar: storage/images/avatars/panda.png
+                      created_at: '2024-08-01T10:08:41.000000Z'
+                      updated_at: '2024-08-01T10:08:41.000000Z'
       tags:
         - 'Game management'
       security: []
@@ -340,228 +355,47 @@ paths:
       summary: 'Store a new game and return it.'
       operationId: storeANewGameAndReturnIt
       description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  status: finished
-                  updated_at: '2024-07-31T11:00:28.000000Z'
-                  created_at: '2024-07-31T11:00:28.000000Z'
-                  id: 102
-                properties:
-                  status:
-                    type: string
-                    example: finished
-                  updated_at:
-                    type: string
-                    example: '2024-07-31T11:00:28.000000Z'
-                  created_at:
-                    type: string
-                    example: '2024-07-31T11:00:28.000000Z'
-                  id:
-                    type: integer
-                    example: 102
-      tags:
-        - 'Game management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                status:
-                  type: string
-                  description: 'The status of the game. (`finished` or `waiting`).'
-                  example: 'finished, waiting'
-              required:
-                - status
-      security: []
-  '/api/game/{id}':
-    get:
-      summary: 'Display a specific game.'
-      operationId: displayASpecificGame
-      description: ''
       parameters:
-        -
-          in: query
-          name: id
-          description: 'The id of the game'
-          example: 8
-          required: true
-          schema:
-            type: integer
-            description: 'The id of the game'
-            example: 8
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  id: 1
-                  status: finished
-                  created_at: '2024-07-22T13:49:30.000000Z'
-                  updated_at: '2024-07-30T13:49:30.000000Z'
-                  players:
-                    -
-                      id: 2
-                      pseudo: 'Dr. Modesto Lakin DDS'
-                      avatar: storage/image/avatars/panda
-                      created_at: '2024-07-30T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                      pivot:
-                        game_id: 1
-                        player_id: 2
-                        score: 10
-                        win: 1
-                    -
-                      id: 13
-                      pseudo: 'Jaylan Stehr'
-                      avatar: storage/image/avatars/meerkat
-                      created_at: '2024-07-30T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                      pivot:
-                        game_id: 1
-                        player_id: 13
-                        score: 8
-                        win: 0
-                properties:
-                  id:
-                    type: integer
-                    example: 1
-                  status:
-                    type: string
-                    example: finished
-                  created_at:
-                    type: string
-                    example: '2024-07-22T13:49:30.000000Z'
-                  updated_at:
-                    type: string
-                    example: '2024-07-30T13:49:30.000000Z'
-                  players:
-                    type: array
-                    example:
-                      -
-                        id: 2
-                        pseudo: 'Dr. Modesto Lakin DDS'
-                        avatar: storage/image/avatars/panda
-                        created_at: '2024-07-30T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                        pivot:
-                          game_id: 1
-                          player_id: 2
-                          score: 10
-                          win: 1
-                      -
-                        id: 13
-                        pseudo: 'Jaylan Stehr'
-                        avatar: storage/image/avatars/meerkat
-                        created_at: '2024-07-30T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                        pivot:
-                          game_id: 1
-                          player_id: 13
-                          score: 8
-                          win: 0
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 2
-                        pseudo:
-                          type: string
-                          example: 'Dr. Modesto Lakin DDS'
-                        avatar:
-                          type: string
-                          example: storage/image/avatars/panda
-                        created_at:
-                          type: string
-                          example: '2024-07-30T13:49:30.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2024-07-30T13:49:30.000000Z'
-                        pivot:
-                          type: object
-                          properties:
-                            game_id:
-                              type: integer
-                              example: 1
-                            player_id:
-                              type: integer
-                              example: 2
-                            score:
-                              type: integer
-                              example: 10
-                            win:
-                              type: integer
-                              example: 1
-      tags:
-        - 'Game management'
-      security: []
-    put:
-      summary: 'Update the specified game and return the edited version.'
-      operationId: updateTheSpecifiedGameAndReturnTheEditedVersion
-      description: ''
-      parameters:
-        -
-          in: query
-          name: id
-          description: 'The id of the game'
-          example: 6
-          required: true
-          schema:
-            type: integer
-            description: 'The id of the game'
-            example: 6
         -
           in: query
           name: player1_id
           description: 'The id of the first player'
-          example: 8
+          example: 15
           required: true
           schema:
             type: integer
             description: 'The id of the first player'
-            example: 8
+            example: 15
         -
           in: query
           name: player2_id
           description: 'The id of the second player'
-          example: 14
+          example: 6
           required: true
           schema:
             type: integer
             description: 'The id of the second player'
-            example: 14
+            example: 6
         -
           in: query
           name: player1_score
           description: 'The score of the first player. Min : 0, Max : 10'
-          example: 19
+          example: 11
           required: false
           schema:
             type: integer
             description: 'The score of the first player. Min : 0, Max : 10'
-            example: 19
+            example: 11
         -
           in: query
           name: player2_score
           description: 'The score of the second player. Min : 0, Max : 10'
-          example: 4
+          example: 11
           required: false
           schema:
             type: integer
             description: 'The score of the second player. Min : 0, Max : 10'
-            example: 4
+            example: 11
       responses:
         200:
           description: ''
@@ -572,31 +406,24 @@ paths:
                 example:
                   id: 1
                   status: finished
-                  created_at: '2024-07-22T13:49:30.000000Z'
-                  updated_at: '2024-07-30T13:49:30.000000Z'
-                  players:
-                    -
-                      id: 2
-                      pseudo: 'Dr. Modesto Lakin DDS'
-                      avatar: storage/image/avatars/panda
-                      created_at: '2024-07-30T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                      pivot:
-                        game_id: 1
-                        player_id: 2
-                        score: 10
-                        win: 1
-                    -
-                      id: 13
-                      pseudo: 'Jaylan Stehr'
-                      avatar: storage/image/avatars/meerkat
-                      created_at: '2024-07-30T13:49:30.000000Z'
-                      updated_at: '2024-07-30T13:49:30.000000Z'
-                      pivot:
-                        game_id: 1
-                        player_id: 13
-                        score: 8
-                        win: 0
+                  player1_id: 5
+                  player2_id: 4
+                  player1_score: 10
+                  player2_score: 7
+                  created_at: '2024-07-23T10:08:41.000000Z'
+                  updated_at: '2024-08-01T10:08:42.000000Z'
+                  player1:
+                    id: 5
+                    pseudo: 'Miss Ena Thiel'
+                    avatar: storage/images/avatars/bear.png
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:41.000000Z'
+                  player2:
+                    id: 4
+                    pseudo: 'Mike Pouros'
+                    avatar: storage/images/avatars/bear.png
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:41.000000Z'
                 properties:
                   id:
                     type: integer
@@ -604,70 +431,60 @@ paths:
                   status:
                     type: string
                     example: finished
+                  player1_id:
+                    type: integer
+                    example: 5
+                  player2_id:
+                    type: integer
+                    example: 4
+                  player1_score:
+                    type: integer
+                    example: 10
+                  player2_score:
+                    type: integer
+                    example: 7
                   created_at:
                     type: string
-                    example: '2024-07-22T13:49:30.000000Z'
+                    example: '2024-07-23T10:08:41.000000Z'
                   updated_at:
                     type: string
-                    example: '2024-07-30T13:49:30.000000Z'
-                  players:
-                    type: array
-                    example:
-                      -
-                        id: 2
-                        pseudo: 'Dr. Modesto Lakin DDS'
-                        avatar: storage/image/avatars/panda
-                        created_at: '2024-07-30T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                        pivot:
-                          game_id: 1
-                          player_id: 2
-                          score: 10
-                          win: 1
-                      -
-                        id: 13
-                        pseudo: 'Jaylan Stehr'
-                        avatar: storage/image/avatars/meerkat
-                        created_at: '2024-07-30T13:49:30.000000Z'
-                        updated_at: '2024-07-30T13:49:30.000000Z'
-                        pivot:
-                          game_id: 1
-                          player_id: 13
-                          score: 8
-                          win: 0
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 2
-                        pseudo:
-                          type: string
-                          example: 'Dr. Modesto Lakin DDS'
-                        avatar:
-                          type: string
-                          example: storage/image/avatars/panda
-                        created_at:
-                          type: string
-                          example: '2024-07-30T13:49:30.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2024-07-30T13:49:30.000000Z'
-                        pivot:
-                          type: object
-                          properties:
-                            game_id:
-                              type: integer
-                              example: 1
-                            player_id:
-                              type: integer
-                              example: 2
-                            score:
-                              type: integer
-                              example: 10
-                            win:
-                              type: integer
-                              example: 1
+                    example: '2024-08-01T10:08:42.000000Z'
+                  player1:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 5
+                      pseudo:
+                        type: string
+                        example: 'Miss Ena Thiel'
+                      avatar:
+                        type: string
+                        example: storage/images/avatars/bear.png
+                      created_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                  player2:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 4
+                      pseudo:
+                        type: string
+                        example: 'Mike Pouros'
+                      avatar:
+                        type: string
+                        example: storage/images/avatars/bear.png
+                      created_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
       tags:
         - 'Game management'
       requestBody:
@@ -684,19 +501,305 @@ paths:
                 player1_id:
                   type: number
                   description: ''
-                  example: 2606.102
+                  example: 733683.88037
                 player2_id:
                   type: number
                   description: ''
-                  example: 40.8925483
+                  example: 528237.96
                 player1_score:
                   type: number
                   description: 'Must be at least 0. Must not be greater than 10.'
-                  example: 10
+                  example: 4
                 player2_score:
                   type: number
                   description: 'Must be at least 0. Must not be greater than 10.'
-                  example: 9
+                  example: 6
+              required:
+                - status
+                - player1_id
+                - player2_id
+      security: []
+  '/api/game/{id}':
+    get:
+      summary: 'Display a specific game.'
+      operationId: displayASpecificGame
+      description: ''
+      parameters:
+        -
+          in: query
+          name: id
+          description: 'The id of the game'
+          example: 20
+          required: true
+          schema:
+            type: integer
+            description: 'The id of the game'
+            example: 20
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  status: finished
+                  player1_id: 5
+                  player2_id: 4
+                  player1_score: 10
+                  player2_score: 7
+                  created_at: '2024-07-23T10:08:41.000000Z'
+                  updated_at: '2024-08-01T10:08:42.000000Z'
+                  player1:
+                    id: 5
+                    pseudo: 'Miss Ena Thiel'
+                    avatar: storage/images/avatars/bear.png
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:41.000000Z'
+                  player2:
+                    id: 4
+                    pseudo: 'Mike Pouros'
+                    avatar: storage/images/avatars/bear.png
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:41.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  status:
+                    type: string
+                    example: finished
+                  player1_id:
+                    type: integer
+                    example: 5
+                  player2_id:
+                    type: integer
+                    example: 4
+                  player1_score:
+                    type: integer
+                    example: 10
+                  player2_score:
+                    type: integer
+                    example: 7
+                  created_at:
+                    type: string
+                    example: '2024-07-23T10:08:41.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2024-08-01T10:08:42.000000Z'
+                  player1:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 5
+                      pseudo:
+                        type: string
+                        example: 'Miss Ena Thiel'
+                      avatar:
+                        type: string
+                        example: storage/images/avatars/bear.png
+                      created_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                  player2:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 4
+                      pseudo:
+                        type: string
+                        example: 'Mike Pouros'
+                      avatar:
+                        type: string
+                        example: storage/images/avatars/bear.png
+                      created_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+      tags:
+        - 'Game management'
+      security: []
+    put:
+      summary: 'Update the specified game and return the edited version.'
+      operationId: updateTheSpecifiedGameAndReturnTheEditedVersion
+      description: ''
+      parameters:
+        -
+          in: query
+          name: id
+          description: 'The id of the game'
+          example: 8
+          required: true
+          schema:
+            type: integer
+            description: 'The id of the game'
+            example: 8
+        -
+          in: query
+          name: player1_id
+          description: 'The id of the first player'
+          example: 8
+          required: true
+          schema:
+            type: integer
+            description: 'The id of the first player'
+            example: 8
+        -
+          in: query
+          name: player2_id
+          description: 'The id of the second player'
+          example: 2
+          required: true
+          schema:
+            type: integer
+            description: 'The id of the second player'
+            example: 2
+        -
+          in: query
+          name: player1_score
+          description: 'The score of the first player. Min : 0, Max : 10'
+          example: 3
+          required: false
+          schema:
+            type: integer
+            description: 'The score of the first player. Min : 0, Max : 10'
+            example: 3
+        -
+          in: query
+          name: player2_score
+          description: 'The score of the second player. Min : 0, Max : 10'
+          example: 14
+          required: false
+          schema:
+            type: integer
+            description: 'The score of the second player. Min : 0, Max : 10'
+            example: 14
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  status: finished
+                  player1_id: 5
+                  player2_id: 4
+                  player1_score: 10
+                  player2_score: 7
+                  created_at: '2024-07-23T10:08:41.000000Z'
+                  updated_at: '2024-08-01T10:08:42.000000Z'
+                  player1:
+                    id: 5
+                    pseudo: 'Miss Ena Thiel'
+                    avatar: storage/images/avatars/bear.png
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:41.000000Z'
+                  player2:
+                    id: 4
+                    pseudo: 'Mike Pouros'
+                    avatar: storage/images/avatars/bear.png
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:41.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  status:
+                    type: string
+                    example: finished
+                  player1_id:
+                    type: integer
+                    example: 5
+                  player2_id:
+                    type: integer
+                    example: 4
+                  player1_score:
+                    type: integer
+                    example: 10
+                  player2_score:
+                    type: integer
+                    example: 7
+                  created_at:
+                    type: string
+                    example: '2024-07-23T10:08:41.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2024-08-01T10:08:42.000000Z'
+                  player1:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 5
+                      pseudo:
+                        type: string
+                        example: 'Miss Ena Thiel'
+                      avatar:
+                        type: string
+                        example: storage/images/avatars/bear.png
+                      created_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                  player2:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 4
+                      pseudo:
+                        type: string
+                        example: 'Mike Pouros'
+                      avatar:
+                        type: string
+                        example: storage/images/avatars/bear.png
+                      created_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+      tags:
+        - 'Game management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  description: 'The status of the game. (`finished` or `waiting`).'
+                  example: 'finished, waiting'
+                player1_id:
+                  type: number
+                  description: ''
+                  example: 42957.7435876
+                player2_id:
+                  type: number
+                  description: ''
+                  example: 14295.017
+                player1_score:
+                  type: number
+                  description: 'Must be at least 0. Must not be greater than 10.'
+                  example: 3
+                player2_score:
+                  type: number
+                  description: 'Must be at least 0. Must not be greater than 10.'
+                  example: 7
               required:
                 - status
                 - player1_id
@@ -711,12 +814,12 @@ paths:
           in: query
           name: id
           description: 'The id of the game'
-          example: 3
+          example: 16
           required: true
           schema:
             type: integer
             description: 'The id of the game'
-            example: 3
+            example: 16
       responses:
         200:
           description: ''
@@ -725,23 +828,87 @@ paths:
               schema:
                 type: object
                 example:
+                  id: 1
                   status: finished
-                  updated_at: '2024-07-31T11:00:28.000000Z'
-                  created_at: '2024-07-31T11:00:28.000000Z'
-                  id: 102
+                  player1_id: 5
+                  player2_id: 4
+                  player1_score: 10
+                  player2_score: 7
+                  created_at: '2024-07-23T10:08:41.000000Z'
+                  updated_at: '2024-08-01T10:08:42.000000Z'
+                  player1:
+                    id: 5
+                    pseudo: 'Miss Ena Thiel'
+                    avatar: storage/images/avatars/bear.png
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:41.000000Z'
+                  player2:
+                    id: 4
+                    pseudo: 'Mike Pouros'
+                    avatar: storage/images/avatars/bear.png
+                    created_at: '2024-08-01T10:08:41.000000Z'
+                    updated_at: '2024-08-01T10:08:41.000000Z'
                 properties:
+                  id:
+                    type: integer
+                    example: 1
                   status:
                     type: string
                     example: finished
-                  updated_at:
-                    type: string
-                    example: '2024-07-31T11:00:28.000000Z'
+                  player1_id:
+                    type: integer
+                    example: 5
+                  player2_id:
+                    type: integer
+                    example: 4
+                  player1_score:
+                    type: integer
+                    example: 10
+                  player2_score:
+                    type: integer
+                    example: 7
                   created_at:
                     type: string
-                    example: '2024-07-31T11:00:28.000000Z'
-                  id:
-                    type: integer
-                    example: 102
+                    example: '2024-07-23T10:08:41.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2024-08-01T10:08:42.000000Z'
+                  player1:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 5
+                      pseudo:
+                        type: string
+                        example: 'Miss Ena Thiel'
+                      avatar:
+                        type: string
+                        example: storage/images/avatars/bear.png
+                      created_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                  player2:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 4
+                      pseudo:
+                        type: string
+                        example: 'Mike Pouros'
+                      avatar:
+                        type: string
+                        example: storage/images/avatars/bear.png
+                      created_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2024-08-01T10:08:41.000000Z'
       tags:
         - 'Game management'
       security: []
@@ -764,12 +931,12 @@ paths:
           in: query
           name: page
           description: 'Each page contain 15 games'
-          example: 7
+          example: 16
           required: true
           schema:
             type: integer
             description: 'Each page contain 15 games'
-            example: 7
+            example: 16
       responses:
         200:
           description: ''
@@ -1233,12 +1400,12 @@ paths:
           in: query
           name: id
           description: 'The id of the game'
-          example: 11
+          example: 5
           required: true
           schema:
             type: integer
             description: 'The id of the game'
-            example: 11
+            example: 5
       responses:
         200:
           description: ''
@@ -1297,14 +1464,185 @@ paths:
                   type: object
                 example:
                   -
-                    pseudo: 'Sasha Harber'
-                    games_played: 7
+                    pseudo: 'Ms. Mara Lubowitz'
+                    games_played: 2
+                    games_winned: 2
+                    games_losed: 0
+                    goals_out: 20
+                    goals_in: 6
+                    games_ratio: 1
+                    goals_difference: 14
+                  -
+                    pseudo: 'Mr. Steve Schaefer'
+                    games_played: 3
                     games_winned: 3
-                    games_losed: 4
-                    goals_out: 44
-                    goals_in: 59
-                    games_ratio: 0.42857142857143
-                    goals_difference: -15
+                    games_losed: 0
+                    goals_out: 30
+                    goals_in: 24
+                    games_ratio: 1
+                    goals_difference: 6
+                  -
+                    pseudo: 'Mr. Rodrick Brakus IV'
+                    games_played: 2
+                    games_winned: 2
+                    games_losed: 0
+                    goals_out: 20
+                    goals_in: 9
+                    games_ratio: 1
+                    goals_difference: 11
+                  -
+                    pseudo: 'Mike Pouros'
+                    games_played: 8
+                    games_winned: 8
+                    games_losed: 0
+                    goals_out: 80
+                    goals_in: 48
+                    games_ratio: 1
+                    goals_difference: 32
+                  -
+                    pseudo: 'Miss Ena Thiel'
+                    games_played: 7
+                    games_winned: 7
+                    games_losed: 0
+                    goals_out: 70
+                    goals_in: 40
+                    games_ratio: 1
+                    goals_difference: 30
+                  -
+                    pseudo: 'Era Rath Jr.'
+                    games_played: 1
+                    games_winned: 1
+                    games_losed: 0
+                    goals_out: 10
+                    goals_in: 9
+                    games_ratio: 1
+                    goals_difference: 1
+                  -
+                    pseudo: 'Harold Smith'
+                    games_played: 5
+                    games_winned: 5
+                    games_losed: 0
+                    goals_out: 50
+                    goals_in: 26
+                    games_ratio: 1
+                    goals_difference: 24
+                  -
+                    pseudo: 'Dr. Mckenna Rosenbaum V'
+                    games_played: 6
+                    games_winned: 6
+                    games_losed: 0
+                    goals_out: 60
+                    goals_in: 28
+                    games_ratio: 1
+                    goals_difference: 32
+                  -
+                    pseudo: 'Talon Gulgowski'
+                    games_played: 0
+                    games_winned: 0
+                    games_losed: 0
+                    goals_out: 0
+                    goals_in: 0
+                    games_ratio: 0
+                    goals_difference: 0
+                  -
+                    pseudo: 'Hector Wiza'
+                    games_played: 5
+                    games_winned: 5
+                    games_losed: 0
+                    goals_out: 50
+                    goals_in: 28
+                    games_ratio: 1
+                    goals_difference: 22
+                  -
+                    pseudo: 'Melissa Bruen'
+                    games_played: 7
+                    games_winned: 7
+                    games_losed: 0
+                    goals_out: 70
+                    goals_in: 56
+                    games_ratio: 1
+                    goals_difference: 14
+                  -
+                    pseudo: 'Okey Walter'
+                    games_played: 7
+                    games_winned: 7
+                    games_losed: 0
+                    goals_out: 70
+                    goals_in: 12
+                    games_ratio: 1
+                    goals_difference: 58
+                  -
+                    pseudo: 'Ms. Nina Hill'
+                    games_played: 3
+                    games_winned: 3
+                    games_losed: 0
+                    goals_out: 30
+                    goals_in: 22
+                    games_ratio: 1
+                    goals_difference: 8
+                  -
+                    pseudo: 'Prof. Austen Satterfield'
+                    games_played: 8
+                    games_winned: 8
+                    games_losed: 0
+                    goals_out: 80
+                    goals_in: 41
+                    games_ratio: 1
+                    goals_difference: 39
+                  -
+                    pseudo: 'Carlotta Hettinger'
+                    games_played: 3
+                    games_winned: 3
+                    games_losed: 0
+                    goals_out: 30
+                    goals_in: 18
+                    games_ratio: 1
+                    goals_difference: 12
+                  -
+                    pseudo: 'Alek Stracke MD'
+                    games_played: 7
+                    games_winned: 7
+                    games_losed: 0
+                    goals_out: 70
+                    goals_in: 24
+                    games_ratio: 1
+                    goals_difference: 46
+                  -
+                    pseudo: 'Jamison Kemmer'
+                    games_played: 4
+                    games_winned: 4
+                    games_losed: 0
+                    goals_out: 40
+                    goals_in: 19
+                    games_ratio: 1
+                    goals_difference: 21
+                  -
+                    pseudo: 'Mr. Lee Willms I'
+                    games_played: 3
+                    games_winned: 3
+                    games_losed: 0
+                    goals_out: 30
+                    goals_in: 15
+                    games_ratio: 1
+                    goals_difference: 15
+                  -
+                    pseudo: 'Evert Bashirian DDS'
+                    games_played: 10
+                    games_winned: 10
+                    games_losed: 0
+                    goals_out: 100
+                    goals_in: 57
+                    games_ratio: 1
+                    goals_difference: 43
+                  -
+                    pseudo: "Polly O'Connell III"
+                    games_played: 9
+                    games_winned: 9
+                    games_losed: 0
+                    goals_out: 90
+                    goals_in: 52
+                    games_ratio: 1
+                    goals_difference: 38
       tags:
         - Statistics
       security: []

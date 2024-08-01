@@ -19,34 +19,16 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![Angular][Angular.io]][Angular-url]
+[![Ionic][Ionic.io]][Ionic-url]
+[![Laravel][Laravel.com]][Laravel-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  <h3 align="center">Table football scorer</h3>
 
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -55,6 +37,7 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
+      <a href="#gallery">Gallery</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -79,11 +62,47 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Video of presentation](https://github.com/charlyhayoz/tablefootball_score/blob/main/screenshots/videoImage.png?raw=true)](https://youtu.be/LFZM726dNMA)
 
 Are you a table football addict ? So maybe you find hard to keep scores of your multiple games. This project will help you to keep track, see statistics and even have some prediction with machine-learning.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Gallery
+
+### Video
+
+[![Video of presentation](https://github.com/charlyhayoz/tablefootball_score/blob/main/screenshots/videoImage.png?raw=true)](https://youtu.be/LFZM726dNMA)
+
+### Image
+
+#### Games tab
+
+![Games tabs](https://github.com/charlyhayoz/tablefootball_score/blob/main/screenshots/games.png?raw=true)
+
+#### Add game
+
+![Add game](https://github.com/charlyhayoz/tablefootball_score/blob/main/screenshots/newGame.png?raw=true)
+
+#### Edit game
+
+![Edit game](https://github.com/charlyhayoz/tablefootball_score/blob/main/screenshots/editGame.png?raw=true)
+
+#### Statistics tab
+
+![Statistics tab](https://github.com/charlyhayoz/tablefootball_score/blob/main/screenshots/statistics.png?raw=true)
+
+#### Players tab
+
+![Player tab](https://github.com/charlyhayoz/tablefootball_score/blob/main/screenshots/players.png?raw=true)
+
+#### Responsive mode / mobile mode
+
+![Responsive demo](https://github.com/charlyhayoz/tablefootball_score/blob/main/screenshots/responsive.png?raw=true)
+
+#### Documentation
+
+![Documentation](https://github.com/charlyhayoz/tablefootball_score/blob/main/screenshots/documentation.png?raw=true)
 
 ### Built With
 
@@ -96,7 +115,6 @@ Are you a table football addict ? So maybe you find hard to keep scores of your 
 
 - [![Laravel][Laravel.com]][Laravel-url]
   - With [knuckleswtf/scribe](https://scribe.knuckles.wtf/laravel) for the automatic documentation
-  - With [php-ai/php-ml](https://php-ml.readthedocs.io/en/latest/) for the machine learning
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,7 +140,7 @@ Then verify than Node.JS & NPM is correctly installed with `node -v` and `npm -v
 
 [![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
 
-[PHP](https://www.php.net/) will be used as the main language for the back-end.
+[PHP 8.2](https://www.php.net/) will be used as the main language for the back-end.
 
 For installing it, execute `sudo apt install php libapache2-mod-php`
 
@@ -152,12 +170,12 @@ The control that composer is installed correctly with `composer -V`
 
 #### (Front-end)
 
-In case, if you want to execute the frontend in standalone
+In case, if you want to execute the frontend in standalone or for development purpose
 
 1. Change the directory : `cd frontend`
-2. Install the Ionic CLI globally with : `npm install -g @ionic/cli`
+2. Install the Ionic CLI globally with : `npm install -g @ionic/cli` (Dont forget to have the right version of node.js selected on nvm)
 3. Install the dependencies : `npm install`
-4. Start the server with : `ionic serve`
+4. Start the front-end server with : `ionic serve`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,11 +183,7 @@ In case, if you want to execute the frontend in standalone
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+How to develop further the project ?
 
 ### Frontend
 
@@ -183,7 +197,52 @@ The application is then builded in the `frontend/www` folder.
 
 Then, copy all the file to the `backend/public/app` folder with the command : `cp -r www/* ../backend/public/app`
 
+#### Creating new page
+
+You can easily create new page with `ionic g page pages/the_name_of_your_page`
+
+#### Creating new service
+
+You can easily create new page with `ionic g service services/the_name_of_your_service`
+
 ### Backend
+
+#### Database
+
+##### Fresh migration
+
+With seeding : `sail artisan migrate:fresh --seed`
+Without seeding: `sail artisan migrate:fresh`
+
+##### Add a migration
+
+Create your migration : `sail artisan make:migration your_migration_name`
+Execute the migration : `sail artisan migrate`
+Rollback the last migration : `sail artisan migrate:rollback --step=1`
+
+##### Check data in Database
+
+Use PHPMyAdmin
+
+You can easily check data in the database with [http://localhost:8080/](http://localhost:8080/)
+
+#### Creating assets
+
+##### Models
+
+Empty model : `sail artisan make:model name_model`
+
+##### Controllers
+
+Blank controller : `sail artisan make:controller name_controller`
+Invokable controller : `sail artisan make:controller name_controller --invokable`
+REST controller : `sail artisan make:controller name_controller --model=your_model --resource`
+
+##### Policy
+
+Policy is very important for controlling the access in your controller to a resource
+
+`sail artisan make:policy NamePolicy --model=your_model`
 
 #### Automatic documentation
 
@@ -209,43 +268,17 @@ And the document each of your function with the following model :
 
 And then, regenerate the documentation with : `./vendor/bin/sail artisan scribe:generate`
 
-Your documentation will be then disponible on the endpoint `/docs`
-
-#### Debug
-
-##### Check data in Database
-
-Use PHPMyAdmin
-
-You can easily check data in the database with [http://localhost:8080/](http://localhost:8080/)
+Your documentation will be then disponible on the endpoint [http://localhost/docs](http://localhost/docs)
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-- [ ] Add translation
-- [ ] Add machine learning for prediction
+- [ ] Add translation on the front-end
+- [ ] Add machine learning for prediction on the back-end
+- [ ] Add login (Users are already created)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## License
 
@@ -257,7 +290,7 @@ Distributed under the Apache License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Charly Hayoz - [charlyhayoz.ch](https://charlyhayoz.ch)
+Charly Hayoz: [charlyhayoz.ch](https://charlyhayoz.ch)
 
 Project Link: [https://github.com/charlyhayoz/tablefootball_score](https://github.com/charlyhayoz/tablefootball_score)
 
@@ -267,35 +300,22 @@ Project Link: [https://github.com/charlyhayoz/tablefootball_score](https://githu
 
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Some resources useful for this project
 
-- [Choose an Open Source License](https://choosealicense.com)
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-- [Malven's Grid Cheatsheet](https://grid.malven.co/)
+- [API documentation (local)](http://localhost/docs)
+- [Laravel documentation](https://laravel.com/docs/11.x/readme)
+- [Ionic documentation](https://ionicframework.com/docs)
+- [Ionic Icons](https://ionic.io/ionicons)
 - [Img Shields](https://shields.io)
 - [GitHub Pages](https://pages.github.com)
-- [Font Awesome](https://fontawesome.com)
-- [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://www.linkedin.com/in/charlyhayoz/
 [Ionic.io]: https://img.shields.io/badge/Ionic-V8-3880FF?style=for-the-badge&logo=ionic&logoColor=white
 [Ionic-url]: https://ionic.io
 [Angular.io]: https://img.shields.io/badge/Angular-V18-DD0031?style=for-the-badge&logo=angular&logoColor=white

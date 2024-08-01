@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Football score documentation",
-        "_postman_id": "6f5dc22a-07e2-4fb2-98b2-9c9a6bc55ba7",
+        "_postman_id": "9941d9b4-e938-40cc-9675-6eef778d9d1e",
         "description": "All the APIs endpoints documentation explained",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -28,12 +28,12 @@
                             "query": [
                                 {
                                     "key": "page",
-                                    "value": "1",
+                                    "value": "9",
                                     "description": "Each page contain 15 games",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/game?page=1"
+                            "raw": "{{baseUrl}}\/api\/game?page=9"
                         },
                         "method": "GET",
                         "header": [
@@ -56,7 +56,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"current_page\":1,\"data\":[{\"id\":1,\"status\":\"finished\",\"created_at\":\"2024-07-22T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":2,\"status\":\"finished\",\"created_at\":\"2024-07-25T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":3,\"status\":\"finished\",\"created_at\":\"2024-07-29T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":4,\"status\":\"finished\",\"created_at\":\"2024-07-22T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":5,\"status\":\"finished\",\"created_at\":\"2024-07-20T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":6,\"status\":\"finished\",\"created_at\":\"2024-07-28T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":7,\"status\":\"finished\",\"created_at\":\"2024-07-28T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":8,\"status\":\"finished\",\"created_at\":\"2024-07-23T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":9,\"status\":\"finished\",\"created_at\":\"2024-07-29T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":10,\"status\":\"finished\",\"created_at\":\"2024-07-29T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":11,\"status\":\"finished\",\"created_at\":\"2024-07-23T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":12,\"status\":\"finished\",\"created_at\":\"2024-07-21T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":13,\"status\":\"finished\",\"created_at\":\"2024-07-26T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":14,\"status\":\"finished\",\"created_at\":\"2024-07-28T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"},{\"id\":15,\"status\":\"finished\",\"created_at\":\"2024-07-24T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=1\",\"from\":1,\"last_page\":7,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=7\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=3\",\"label\":\"3\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=4\",\"label\":\"4\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=5\",\"label\":\"5\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=6\",\"label\":\"6\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=7\",\"label\":\"7\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/game?page=2\",\"path\":\"http:\\\/\\\/localhost\\\/api\\\/game\",\"per_page\":15,\"prev_page_url\":null,\"to\":15,\"total\":100}",
+                            "body": "[{\"id\":1,\"status\":\"finished\",\"player1_id\":5,\"player2_id\":4,\"player1_score\":10,\"player2_score\":7,\"created_at\":\"2024-07-23T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":5,\"pseudo\":\"Miss Ena Thiel\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":4,\"pseudo\":\"Mike Pouros\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":2,\"status\":\"finished\",\"player1_id\":8,\"player2_id\":6,\"player1_score\":10,\"player2_score\":2,\"created_at\":\"2024-07-30T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":8,\"pseudo\":\"Dr. Mckenna Rosenbaum V\",\"avatar\":\"storage\\\/images\\\/avatars\\\/chicken.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":6,\"pseudo\":\"Era Rath Jr.\",\"avatar\":\"storage\\\/images\\\/avatars\\\/meerkat.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":3,\"status\":\"finished\",\"player1_id\":5,\"player2_id\":11,\"player1_score\":10,\"player2_score\":4,\"created_at\":\"2024-07-27T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":5,\"pseudo\":\"Miss Ena Thiel\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":11,\"pseudo\":\"Melissa Bruen\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":4,\"status\":\"finished\",\"player1_id\":16,\"player2_id\":11,\"player1_score\":10,\"player2_score\":1,\"created_at\":\"2024-07-29T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":16,\"pseudo\":\"Alek Stracke MD\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":11,\"pseudo\":\"Melissa Bruen\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":5,\"status\":\"finished\",\"player1_id\":18,\"player2_id\":20,\"player1_score\":10,\"player2_score\":4,\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":18,\"pseudo\":\"Mr. Lee Willms I\",\"avatar\":\"storage\\\/images\\\/avatars\\\/panda.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":20,\"pseudo\":\"Polly O'Connell III\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":6,\"status\":\"finished\",\"player1_id\":20,\"player2_id\":16,\"player1_score\":10,\"player2_score\":8,\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":20,\"pseudo\":\"Polly O'Connell III\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":16,\"pseudo\":\"Alek Stracke MD\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":7,\"status\":\"finished\",\"player1_id\":2,\"player2_id\":10,\"player1_score\":10,\"player2_score\":9,\"created_at\":\"2024-07-29T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":2,\"pseudo\":\"Mr. Steve Schaefer\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":10,\"pseudo\":\"Hector Wiza\",\"avatar\":\"storage\\\/images\\\/avatars\\\/chicken.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":8,\"status\":\"finished\",\"player1_id\":11,\"player2_id\":20,\"player1_score\":10,\"player2_score\":9,\"created_at\":\"2024-07-22T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":11,\"pseudo\":\"Melissa Bruen\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":20,\"pseudo\":\"Polly O'Connell III\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":9,\"status\":\"finished\",\"player1_id\":2,\"player2_id\":5,\"player1_score\":10,\"player2_score\":7,\"created_at\":\"2024-07-25T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":2,\"pseudo\":\"Mr. Steve Schaefer\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":5,\"pseudo\":\"Miss Ena Thiel\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":10,\"status\":\"finished\",\"player1_id\":16,\"player2_id\":5,\"player1_score\":10,\"player2_score\":3,\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":16,\"pseudo\":\"Alek Stracke MD\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":5,\"pseudo\":\"Miss Ena Thiel\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":11,\"status\":\"finished\",\"player1_id\":7,\"player2_id\":2,\"player1_score\":10,\"player2_score\":8,\"created_at\":\"2024-07-22T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":7,\"pseudo\":\"Harold Smith\",\"avatar\":\"storage\\\/images\\\/avatars\\\/astronaut.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":2,\"pseudo\":\"Mr. Steve Schaefer\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":12,\"status\":\"finished\",\"player1_id\":2,\"player2_id\":5,\"player1_score\":10,\"player2_score\":8,\"created_at\":\"2024-07-22T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":2,\"pseudo\":\"Mr. Steve Schaefer\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":5,\"pseudo\":\"Miss Ena Thiel\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":13,\"status\":\"finished\",\"player1_id\":4,\"player2_id\":14,\"player1_score\":10,\"player2_score\":9,\"created_at\":\"2024-07-28T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":4,\"pseudo\":\"Mike Pouros\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":14,\"pseudo\":\"Prof. Austen Satterfield\",\"avatar\":\"storage\\\/images\\\/avatars\\\/chicken.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":14,\"status\":\"finished\",\"player1_id\":18,\"player2_id\":16,\"player1_score\":10,\"player2_score\":8,\"created_at\":\"2024-07-28T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":18,\"pseudo\":\"Mr. Lee Willms I\",\"avatar\":\"storage\\\/images\\\/avatars\\\/panda.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":16,\"pseudo\":\"Alek Stracke MD\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}},{\"id\":15,\"status\":\"finished\",\"player1_id\":20,\"player2_id\":1,\"player1_score\":10,\"player2_score\":4,\"created_at\":\"2024-07-24T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":20,\"pseudo\":\"Polly O'Connell III\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":1,\"pseudo\":\"Ms. Mara Lubowitz\",\"avatar\":\"storage\\\/images\\\/avatars\\\/panda.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}}]",
                             "name": ""
                         }
                     ]
@@ -67,8 +67,33 @@
                         "url": {
                             "host": "{{baseUrl}}",
                             "path": "api\/game",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/game"
+                            "query": [
+                                {
+                                    "key": "player1_id",
+                                    "value": "15",
+                                    "description": "The id of the first player",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "player2_id",
+                                    "value": "6",
+                                    "description": "The id of the second player",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "player1_score",
+                                    "value": "11",
+                                    "description": "The score of the first player. Min : 0, Max : 10",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "player2_score",
+                                    "value": "11",
+                                    "description": "The score of the second player. Min : 0, Max : 10",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/game?player1_id=15&player2_id=6&player1_score=11&player2_score=11"
                         },
                         "method": "POST",
                         "header": [
@@ -83,7 +108,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"status\":\"finished, waiting\"}"
+                            "raw": "{\"status\":\"finished, waiting\",\"player1_id\":733683.88037,\"player2_id\":528237.96,\"player1_score\":4,\"player2_score\":6}"
                         },
                         "description": "",
                         "auth": {
@@ -94,7 +119,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"status\":\"finished\",\"updated_at\":\"2024-07-31T11:00:28.000000Z\",\"created_at\":\"2024-07-31T11:00:28.000000Z\",\"id\":102}",
+                            "body": "{\"id\":1,\"status\":\"finished\",\"player1_id\":5,\"player2_id\":4,\"player1_score\":10,\"player2_score\":7,\"created_at\":\"2024-07-23T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":5,\"pseudo\":\"Miss Ena Thiel\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":4,\"pseudo\":\"Mike Pouros\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -108,12 +133,12 @@
                             "query": [
                                 {
                                     "key": "id",
-                                    "value": "8",
+                                    "value": "20",
                                     "description": "The id of the game",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/game\/:id?id=8",
+                            "raw": "{{baseUrl}}\/api\/game\/:id?id=20",
                             "variable": [
                                 {
                                     "id": "id",
@@ -144,7 +169,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"id\":1,\"status\":\"finished\",\"created_at\":\"2024-07-22T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"players\":[{\"id\":2,\"pseudo\":\"Dr. Modesto Lakin DDS\",\"avatar\":\"storage\\\/image\\\/avatars\\\/panda\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"pivot\":{\"game_id\":1,\"player_id\":2,\"score\":10,\"win\":1}},{\"id\":13,\"pseudo\":\"Jaylan Stehr\",\"avatar\":\"storage\\\/image\\\/avatars\\\/meerkat\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"pivot\":{\"game_id\":1,\"player_id\":13,\"score\":8,\"win\":0}}]}",
+                            "body": "{\"id\":1,\"status\":\"finished\",\"player1_id\":5,\"player2_id\":4,\"player1_score\":10,\"player2_score\":7,\"created_at\":\"2024-07-23T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":5,\"pseudo\":\"Miss Ena Thiel\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":4,\"pseudo\":\"Mike Pouros\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -158,7 +183,7 @@
                             "query": [
                                 {
                                     "key": "id",
-                                    "value": "6",
+                                    "value": "8",
                                     "description": "The id of the game",
                                     "disabled": false
                                 },
@@ -170,24 +195,24 @@
                                 },
                                 {
                                     "key": "player2_id",
-                                    "value": "14",
+                                    "value": "2",
                                     "description": "The id of the second player",
                                     "disabled": false
                                 },
                                 {
                                     "key": "player1_score",
-                                    "value": "19",
+                                    "value": "3",
                                     "description": "The score of the first player. Min : 0, Max : 10",
                                     "disabled": false
                                 },
                                 {
                                     "key": "player2_score",
-                                    "value": "4",
+                                    "value": "14",
                                     "description": "The score of the second player. Min : 0, Max : 10",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/game\/:id?id=6&player1_id=8&player2_id=14&player1_score=19&player2_score=4",
+                            "raw": "{{baseUrl}}\/api\/game\/:id?id=8&player1_id=8&player2_id=2&player1_score=3&player2_score=14",
                             "variable": [
                                 {
                                     "id": "id",
@@ -210,7 +235,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"status\":\"finished, waiting\",\"player1_id\":2606.102,\"player2_id\":40.8925483,\"player1_score\":10,\"player2_score\":9}"
+                            "raw": "{\"status\":\"finished, waiting\",\"player1_id\":42957.7435876,\"player2_id\":14295.017,\"player1_score\":3,\"player2_score\":7}"
                         },
                         "description": "",
                         "auth": {
@@ -221,7 +246,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"id\":1,\"status\":\"finished\",\"created_at\":\"2024-07-22T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"players\":[{\"id\":2,\"pseudo\":\"Dr. Modesto Lakin DDS\",\"avatar\":\"storage\\\/image\\\/avatars\\\/panda\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"pivot\":{\"game_id\":1,\"player_id\":2,\"score\":10,\"win\":1}},{\"id\":13,\"pseudo\":\"Jaylan Stehr\",\"avatar\":\"storage\\\/image\\\/avatars\\\/meerkat\",\"created_at\":\"2024-07-30T13:49:30.000000Z\",\"updated_at\":\"2024-07-30T13:49:30.000000Z\",\"pivot\":{\"game_id\":1,\"player_id\":13,\"score\":8,\"win\":0}}]}",
+                            "body": "{\"id\":1,\"status\":\"finished\",\"player1_id\":5,\"player2_id\":4,\"player1_score\":10,\"player2_score\":7,\"created_at\":\"2024-07-23T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":5,\"pseudo\":\"Miss Ena Thiel\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":4,\"pseudo\":\"Mike Pouros\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -235,12 +260,12 @@
                             "query": [
                                 {
                                     "key": "id",
-                                    "value": "3",
+                                    "value": "16",
                                     "description": "The id of the game",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/game\/:id?id=3",
+                            "raw": "{{baseUrl}}\/api\/game\/:id?id=16",
                             "variable": [
                                 {
                                     "id": "id",
@@ -271,7 +296,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"status\":\"finished\",\"updated_at\":\"2024-07-31T11:00:28.000000Z\",\"created_at\":\"2024-07-31T11:00:28.000000Z\",\"id\":102}",
+                            "body": "{\"id\":1,\"status\":\"finished\",\"player1_id\":5,\"player2_id\":4,\"player1_score\":10,\"player2_score\":7,\"created_at\":\"2024-07-23T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:42.000000Z\",\"player1\":{\"id\":5,\"pseudo\":\"Miss Ena Thiel\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"},\"player2\":{\"id\":4,\"pseudo\":\"Mike Pouros\",\"avatar\":\"storage\\\/images\\\/avatars\\\/bear.png\",\"created_at\":\"2024-08-01T10:08:41.000000Z\",\"updated_at\":\"2024-08-01T10:08:41.000000Z\"}}",
                             "name": ""
                         }
                     ]
@@ -291,12 +316,12 @@
                             "query": [
                                 {
                                     "key": "page",
-                                    "value": "7",
+                                    "value": "16",
                                     "description": "Each page contain 15 games",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/player?page=7"
+                            "raw": "{{baseUrl}}\/api\/player?page=16"
                         },
                         "method": "GET",
                         "header": [
@@ -467,12 +492,12 @@
                             "query": [
                                 {
                                     "key": "id",
-                                    "value": "11",
+                                    "value": "5",
                                     "description": "The id of the game",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/player\/:id?id=11",
+                            "raw": "{{baseUrl}}\/api\/player\/:id?id=5",
                             "variable": [
                                 {
                                     "id": "id",
@@ -544,7 +569,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "[{\"pseudo\":\"Sasha Harber\",\"games_played\":7,\"games_winned\":3,\"games_losed\":4,\"goals_out\":44,\"goals_in\":59,\"games_ratio\":0.42857142857142855,\"goals_difference\":-15}]",
+                            "body": "[{\"pseudo\":\"Ms. Mara Lubowitz\",\"games_played\":2,\"games_winned\":2,\"games_losed\":0,\"goals_out\":20,\"goals_in\":6,\"games_ratio\":1,\"goals_difference\":14},{\"pseudo\":\"Mr. Steve Schaefer\",\"games_played\":3,\"games_winned\":3,\"games_losed\":0,\"goals_out\":30,\"goals_in\":24,\"games_ratio\":1,\"goals_difference\":6},{\"pseudo\":\"Mr. Rodrick Brakus IV\",\"games_played\":2,\"games_winned\":2,\"games_losed\":0,\"goals_out\":20,\"goals_in\":9,\"games_ratio\":1,\"goals_difference\":11},{\"pseudo\":\"Mike Pouros\",\"games_played\":8,\"games_winned\":8,\"games_losed\":0,\"goals_out\":80,\"goals_in\":48,\"games_ratio\":1,\"goals_difference\":32},{\"pseudo\":\"Miss Ena Thiel\",\"games_played\":7,\"games_winned\":7,\"games_losed\":0,\"goals_out\":70,\"goals_in\":40,\"games_ratio\":1,\"goals_difference\":30},{\"pseudo\":\"Era Rath Jr.\",\"games_played\":1,\"games_winned\":1,\"games_losed\":0,\"goals_out\":10,\"goals_in\":9,\"games_ratio\":1,\"goals_difference\":1},{\"pseudo\":\"Harold Smith\",\"games_played\":5,\"games_winned\":5,\"games_losed\":0,\"goals_out\":50,\"goals_in\":26,\"games_ratio\":1,\"goals_difference\":24},{\"pseudo\":\"Dr. Mckenna Rosenbaum V\",\"games_played\":6,\"games_winned\":6,\"games_losed\":0,\"goals_out\":60,\"goals_in\":28,\"games_ratio\":1,\"goals_difference\":32},{\"pseudo\":\"Talon Gulgowski\",\"games_played\":0,\"games_winned\":0,\"games_losed\":0,\"goals_out\":0,\"goals_in\":0,\"games_ratio\":0,\"goals_difference\":0},{\"pseudo\":\"Hector Wiza\",\"games_played\":5,\"games_winned\":5,\"games_losed\":0,\"goals_out\":50,\"goals_in\":28,\"games_ratio\":1,\"goals_difference\":22},{\"pseudo\":\"Melissa Bruen\",\"games_played\":7,\"games_winned\":7,\"games_losed\":0,\"goals_out\":70,\"goals_in\":56,\"games_ratio\":1,\"goals_difference\":14},{\"pseudo\":\"Okey Walter\",\"games_played\":7,\"games_winned\":7,\"games_losed\":0,\"goals_out\":70,\"goals_in\":12,\"games_ratio\":1,\"goals_difference\":58},{\"pseudo\":\"Ms. Nina Hill\",\"games_played\":3,\"games_winned\":3,\"games_losed\":0,\"goals_out\":30,\"goals_in\":22,\"games_ratio\":1,\"goals_difference\":8},{\"pseudo\":\"Prof. Austen Satterfield\",\"games_played\":8,\"games_winned\":8,\"games_losed\":0,\"goals_out\":80,\"goals_in\":41,\"games_ratio\":1,\"goals_difference\":39},{\"pseudo\":\"Carlotta Hettinger\",\"games_played\":3,\"games_winned\":3,\"games_losed\":0,\"goals_out\":30,\"goals_in\":18,\"games_ratio\":1,\"goals_difference\":12},{\"pseudo\":\"Alek Stracke MD\",\"games_played\":7,\"games_winned\":7,\"games_losed\":0,\"goals_out\":70,\"goals_in\":24,\"games_ratio\":1,\"goals_difference\":46},{\"pseudo\":\"Jamison Kemmer\",\"games_played\":4,\"games_winned\":4,\"games_losed\":0,\"goals_out\":40,\"goals_in\":19,\"games_ratio\":1,\"goals_difference\":21},{\"pseudo\":\"Mr. Lee Willms I\",\"games_played\":3,\"games_winned\":3,\"games_losed\":0,\"goals_out\":30,\"goals_in\":15,\"games_ratio\":1,\"goals_difference\":15},{\"pseudo\":\"Evert Bashirian DDS\",\"games_played\":10,\"games_winned\":10,\"games_losed\":0,\"goals_out\":100,\"goals_in\":57,\"games_ratio\":1,\"goals_difference\":43},{\"pseudo\":\"Polly O'Connell III\",\"games_played\":9,\"games_winned\":9,\"games_losed\":0,\"goals_out\":90,\"goals_in\":52,\"games_ratio\":1,\"goals_difference\":38}]",
                             "name": ""
                         }
                     ]

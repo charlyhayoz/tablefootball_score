@@ -30,13 +30,13 @@ endpoints:
         name: page
         description: 'Each page contain 15 games'
         required: true
-        example: 7
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      page: 7
+      page: 16
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -253,13 +253,13 @@ endpoints:
         name: id
         description: 'The id of the game'
         required: true
-        example: 11
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      id: 11
+      id: 5
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []

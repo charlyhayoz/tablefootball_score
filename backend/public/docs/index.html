@@ -129,7 +129,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: July 31, 2024</li>
+        <li>Last updated: August 1, 2024</li>
     </ul>
 </div>
 
@@ -165,7 +165,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/game?page=1" \
+    --get "http://localhost/api/game?page=9" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -176,7 +176,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 );
 
 const params = {
-    "page": "1",
+    "page": "9",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -199,158 +199,368 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json" style="max-height: 300px;">{
-    &quot;current_page&quot;: 1,
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-22T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 2,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-25T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 3,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-29T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-22T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
-        },
-        {
+<code class="language-json" style="max-height: 300px;">[
+    {
+        &quot;id&quot;: 1,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 5,
+        &quot;player2_id&quot;: 4,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 7,
+        &quot;created_at&quot;: &quot;2024-07-23T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
             &quot;id&quot;: 5,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-20T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
+            &quot;pseudo&quot;: &quot;Miss Ena Thiel&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
         },
-        {
-            &quot;id&quot;: 6,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-28T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 7,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-28T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
-        },
-        {
+        &quot;player2&quot;: {
+            &quot;id&quot;: 4,
+            &quot;pseudo&quot;: &quot;Mike Pouros&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 8,
+        &quot;player2_id&quot;: 6,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 2,
+        &quot;created_at&quot;: &quot;2024-07-30T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
             &quot;id&quot;: 8,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-23T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
+            &quot;pseudo&quot;: &quot;Dr. Mckenna Rosenbaum V&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/chicken.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
         },
-        {
-            &quot;id&quot;: 9,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-29T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
+        &quot;player2&quot;: {
+            &quot;id&quot;: 6,
+            &quot;pseudo&quot;: &quot;Era Rath Jr.&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/meerkat.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 5,
+        &quot;player2_id&quot;: 11,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 4,
+        &quot;created_at&quot;: &quot;2024-07-27T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 5,
+            &quot;pseudo&quot;: &quot;Miss Ena Thiel&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
         },
-        {
-            &quot;id&quot;: 10,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-29T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
-        },
-        {
+        &quot;player2&quot;: {
             &quot;id&quot;: 11,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-23T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
+            &quot;pseudo&quot;: &quot;Melissa Bruen&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 16,
+        &quot;player2_id&quot;: 11,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 1,
+        &quot;created_at&quot;: &quot;2024-07-29T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 16,
+            &quot;pseudo&quot;: &quot;Alek Stracke MD&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
         },
-        {
-            &quot;id&quot;: 12,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-21T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
+        &quot;player2&quot;: {
+            &quot;id&quot;: 11,
+            &quot;pseudo&quot;: &quot;Melissa Bruen&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 18,
+        &quot;player2_id&quot;: 20,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 4,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 18,
+            &quot;pseudo&quot;: &quot;Mr. Lee Willms I&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/panda.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
         },
-        {
-            &quot;id&quot;: 13,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-26T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
+        &quot;player2&quot;: {
+            &quot;id&quot;: 20,
+            &quot;pseudo&quot;: &quot;Polly O&#039;Connell III&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 20,
+        &quot;player2_id&quot;: 16,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 8,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 20,
+            &quot;pseudo&quot;: &quot;Polly O&#039;Connell III&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
         },
-        {
+        &quot;player2&quot;: {
+            &quot;id&quot;: 16,
+            &quot;pseudo&quot;: &quot;Alek Stracke MD&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 7,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 2,
+        &quot;player2_id&quot;: 10,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 9,
+        &quot;created_at&quot;: &quot;2024-07-29T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 2,
+            &quot;pseudo&quot;: &quot;Mr. Steve Schaefer&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        },
+        &quot;player2&quot;: {
+            &quot;id&quot;: 10,
+            &quot;pseudo&quot;: &quot;Hector Wiza&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/chicken.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 8,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 11,
+        &quot;player2_id&quot;: 20,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 9,
+        &quot;created_at&quot;: &quot;2024-07-22T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 11,
+            &quot;pseudo&quot;: &quot;Melissa Bruen&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        },
+        &quot;player2&quot;: {
+            &quot;id&quot;: 20,
+            &quot;pseudo&quot;: &quot;Polly O&#039;Connell III&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 9,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 2,
+        &quot;player2_id&quot;: 5,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 7,
+        &quot;created_at&quot;: &quot;2024-07-25T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 2,
+            &quot;pseudo&quot;: &quot;Mr. Steve Schaefer&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        },
+        &quot;player2&quot;: {
+            &quot;id&quot;: 5,
+            &quot;pseudo&quot;: &quot;Miss Ena Thiel&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 10,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 16,
+        &quot;player2_id&quot;: 5,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 3,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 16,
+            &quot;pseudo&quot;: &quot;Alek Stracke MD&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        },
+        &quot;player2&quot;: {
+            &quot;id&quot;: 5,
+            &quot;pseudo&quot;: &quot;Miss Ena Thiel&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 11,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 7,
+        &quot;player2_id&quot;: 2,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 8,
+        &quot;created_at&quot;: &quot;2024-07-22T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 7,
+            &quot;pseudo&quot;: &quot;Harold Smith&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/astronaut.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        },
+        &quot;player2&quot;: {
+            &quot;id&quot;: 2,
+            &quot;pseudo&quot;: &quot;Mr. Steve Schaefer&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 12,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 2,
+        &quot;player2_id&quot;: 5,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 8,
+        &quot;created_at&quot;: &quot;2024-07-22T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 2,
+            &quot;pseudo&quot;: &quot;Mr. Steve Schaefer&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        },
+        &quot;player2&quot;: {
+            &quot;id&quot;: 5,
+            &quot;pseudo&quot;: &quot;Miss Ena Thiel&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    },
+    {
+        &quot;id&quot;: 13,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 4,
+        &quot;player2_id&quot;: 14,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 9,
+        &quot;created_at&quot;: &quot;2024-07-28T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 4,
+            &quot;pseudo&quot;: &quot;Mike Pouros&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        },
+        &quot;player2&quot;: {
             &quot;id&quot;: 14,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-28T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 15,
-            &quot;status&quot;: &quot;finished&quot;,
-            &quot;created_at&quot;: &quot;2024-07-24T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;
+            &quot;pseudo&quot;: &quot;Prof. Austen Satterfield&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/chicken.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
         }
-    ],
-    &quot;first_page_url&quot;: &quot;http://localhost/api/game?page=1&quot;,
-    &quot;from&quot;: 1,
-    &quot;last_page&quot;: 7,
-    &quot;last_page_url&quot;: &quot;http://localhost/api/game?page=7&quot;,
-    &quot;links&quot;: [
-        {
-            &quot;url&quot;: null,
-            &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
-            &quot;active&quot;: false
+    },
+    {
+        &quot;id&quot;: 14,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 18,
+        &quot;player2_id&quot;: 16,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 8,
+        &quot;created_at&quot;: &quot;2024-07-28T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 18,
+            &quot;pseudo&quot;: &quot;Mr. Lee Willms I&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/panda.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
         },
-        {
-            &quot;url&quot;: &quot;http://localhost/api/game?page=1&quot;,
-            &quot;label&quot;: &quot;1&quot;,
-            &quot;active&quot;: true
-        },
-        {
-            &quot;url&quot;: &quot;http://localhost/api/game?page=2&quot;,
-            &quot;label&quot;: &quot;2&quot;,
-            &quot;active&quot;: false
-        },
-        {
-            &quot;url&quot;: &quot;http://localhost/api/game?page=3&quot;,
-            &quot;label&quot;: &quot;3&quot;,
-            &quot;active&quot;: false
-        },
-        {
-            &quot;url&quot;: &quot;http://localhost/api/game?page=4&quot;,
-            &quot;label&quot;: &quot;4&quot;,
-            &quot;active&quot;: false
-        },
-        {
-            &quot;url&quot;: &quot;http://localhost/api/game?page=5&quot;,
-            &quot;label&quot;: &quot;5&quot;,
-            &quot;active&quot;: false
-        },
-        {
-            &quot;url&quot;: &quot;http://localhost/api/game?page=6&quot;,
-            &quot;label&quot;: &quot;6&quot;,
-            &quot;active&quot;: false
-        },
-        {
-            &quot;url&quot;: &quot;http://localhost/api/game?page=7&quot;,
-            &quot;label&quot;: &quot;7&quot;,
-            &quot;active&quot;: false
-        },
-        {
-            &quot;url&quot;: &quot;http://localhost/api/game?page=2&quot;,
-            &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
-            &quot;active&quot;: false
+        &quot;player2&quot;: {
+            &quot;id&quot;: 16,
+            &quot;pseudo&quot;: &quot;Alek Stracke MD&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
         }
-    ],
-    &quot;next_page_url&quot;: &quot;http://localhost/api/game?page=2&quot;,
-    &quot;path&quot;: &quot;http://localhost/api/game&quot;,
-    &quot;per_page&quot;: 15,
-    &quot;prev_page_url&quot;: null,
-    &quot;to&quot;: 15,
-    &quot;total&quot;: 100
-}</code>
+    },
+    {
+        &quot;id&quot;: 15,
+        &quot;status&quot;: &quot;finished&quot;,
+        &quot;player1_id&quot;: 20,
+        &quot;player2_id&quot;: 1,
+        &quot;player1_score&quot;: 10,
+        &quot;player2_score&quot;: 4,
+        &quot;created_at&quot;: &quot;2024-07-24T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+        &quot;player1&quot;: {
+            &quot;id&quot;: 20,
+            &quot;pseudo&quot;: &quot;Polly O&#039;Connell III&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        },
+        &quot;player2&quot;: {
+            &quot;id&quot;: 1,
+            &quot;pseudo&quot;: &quot;Ms. Mara Lubowitz&quot;,
+            &quot;avatar&quot;: &quot;storage/images/avatars/panda.png&quot;,
+            &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+        }
+    }
+]</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-game" hidden>
@@ -429,10 +639,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-game"
-               value="1"
+               value="9"
                data-component="query">
     <br>
-<p>Each page contain 15 games Example: <code>1</code></p>
+<p>Each page contain 15 games Example: <code>9</code></p>
             </div>
                 </form>
 
@@ -449,11 +659,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/game" \
+    "http://localhost/api/game?player1_id=15&amp;player2_id=6&amp;player1_score=11&amp;player2_score=11" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"finished, waiting\"
+    \"status\": \"finished, waiting\",
+    \"player1_id\": 733683.88037,
+    \"player2_id\": 528237.96,
+    \"player1_score\": 4,
+    \"player2_score\": 6
 }"
 </code></pre></div>
 
@@ -463,13 +677,26 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost/api/game"
 );
 
+const params = {
+    "player1_id": "15",
+    "player2_id": "6",
+    "player1_score": "11",
+    "player2_score": "11",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "status": "finished, waiting"
+    "status": "finished, waiting",
+    "player1_id": 733683.88037,
+    "player2_id": 528237.96,
+    "player1_score": 4,
+    "player2_score": 6
 };
 
 fetch(url, {
@@ -487,10 +714,28 @@ fetch(url, {
                 <pre>
 
 <code class="language-json" style="max-height: 300px;">{
+    &quot;id&quot;: 1,
     &quot;status&quot;: &quot;finished&quot;,
-    &quot;updated_at&quot;: &quot;2024-07-31T11:00:28.000000Z&quot;,
-    &quot;created_at&quot;: &quot;2024-07-31T11:00:28.000000Z&quot;,
-    &quot;id&quot;: 102
+    &quot;player1_id&quot;: 5,
+    &quot;player2_id&quot;: 4,
+    &quot;player1_score&quot;: 10,
+    &quot;player2_score&quot;: 7,
+    &quot;created_at&quot;: &quot;2024-07-23T10:08:41.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+    &quot;player1&quot;: {
+        &quot;id&quot;: 5,
+        &quot;pseudo&quot;: &quot;Miss Ena Thiel&quot;,
+        &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+    },
+    &quot;player2&quot;: {
+        &quot;id&quot;: 4,
+        &quot;pseudo&quot;: &quot;Mike Pouros&quot;,
+        &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -563,7 +808,52 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>player1_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="player1_id"                data-endpoint="POSTapi-game"
+               value="15"
+               data-component="query">
+    <br>
+<p>The id of the first player Example: <code>15</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>player2_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="player2_id"                data-endpoint="POSTapi-game"
+               value="6"
+               data-component="query">
+    <br>
+<p>The id of the second player Example: <code>6</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>player1_score</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="player1_score"                data-endpoint="POSTapi-game"
+               value="11"
+               data-component="query">
+    <br>
+<p>The score of the first player. Min : 0, Max : 10 Example: <code>11</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>player2_score</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="player2_score"                data-endpoint="POSTapi-game"
+               value="11"
+               data-component="query">
+    <br>
+<p>The score of the second player. Min : 0, Max : 10 Example: <code>11</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
@@ -574,6 +864,50 @@ You can check the Dev Tools console for debugging information.</code></pre>
                data-component="body">
     <br>
 <p>The status of the game. (<code>finished</code> or <code>waiting</code>). Example: <code>finished, waiting</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>player1_id</code></b>&nbsp;&nbsp;
+<small>number</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="player1_id"                data-endpoint="POSTapi-game"
+               value="733683.88037"
+               data-component="body">
+    <br>
+<p>Example: <code>733683.88037</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>player2_id</code></b>&nbsp;&nbsp;
+<small>number</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="player2_id"                data-endpoint="POSTapi-game"
+               value="528237.96"
+               data-component="body">
+    <br>
+<p>Example: <code>528237.96</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>player1_score</code></b>&nbsp;&nbsp;
+<small>number</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="player1_score"                data-endpoint="POSTapi-game"
+               value="4"
+               data-component="body">
+    <br>
+<p>Must be at least 0. Must not be greater than 10. Example: <code>4</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>player2_score</code></b>&nbsp;&nbsp;
+<small>number</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="player2_score"                data-endpoint="POSTapi-game"
+               value="6"
+               data-component="body">
+    <br>
+<p>Must be at least 0. Must not be greater than 10. Example: <code>6</code></p>
         </div>
         </form>
 
@@ -590,7 +924,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/game/1?id=8" \
+    --get "http://localhost/api/game/1?id=20" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -601,7 +935,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const params = {
-    "id": "8",
+    "id": "20",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -627,36 +961,26 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;id&quot;: 1,
     &quot;status&quot;: &quot;finished&quot;,
-    &quot;created_at&quot;: &quot;2024-07-22T13:49:30.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;,
-    &quot;players&quot;: [
-        {
-            &quot;id&quot;: 2,
-            &quot;pseudo&quot;: &quot;Dr. Modesto Lakin DDS&quot;,
-            &quot;avatar&quot;: &quot;storage/image/avatars/panda&quot;,
-            &quot;created_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;,
-            &quot;pivot&quot;: {
-                &quot;game_id&quot;: 1,
-                &quot;player_id&quot;: 2,
-                &quot;score&quot;: 10,
-                &quot;win&quot;: 1
-            }
-        },
-        {
-            &quot;id&quot;: 13,
-            &quot;pseudo&quot;: &quot;Jaylan Stehr&quot;,
-            &quot;avatar&quot;: &quot;storage/image/avatars/meerkat&quot;,
-            &quot;created_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;,
-            &quot;pivot&quot;: {
-                &quot;game_id&quot;: 1,
-                &quot;player_id&quot;: 13,
-                &quot;score&quot;: 8,
-                &quot;win&quot;: 0
-            }
-        }
-    ]
+    &quot;player1_id&quot;: 5,
+    &quot;player2_id&quot;: 4,
+    &quot;player1_score&quot;: 10,
+    &quot;player2_score&quot;: 7,
+    &quot;created_at&quot;: &quot;2024-07-23T10:08:41.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+    &quot;player1&quot;: {
+        &quot;id&quot;: 5,
+        &quot;pseudo&quot;: &quot;Miss Ena Thiel&quot;,
+        &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+    },
+    &quot;player2&quot;: {
+        &quot;id&quot;: 4,
+        &quot;pseudo&quot;: &quot;Mike Pouros&quot;,
+        &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -748,10 +1072,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-game--id-"
-               value="8"
+               value="20"
                data-component="query">
     <br>
-<p>The id of the game Example: <code>8</code></p>
+<p>The id of the game Example: <code>20</code></p>
             </div>
                 </form>
 
@@ -768,15 +1092,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/game/1?id=6&amp;player1_id=8&amp;player2_id=14&amp;player1_score=19&amp;player2_score=4" \
+    "http://localhost/api/game/1?id=8&amp;player1_id=8&amp;player2_id=2&amp;player1_score=3&amp;player2_score=14" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"status\": \"finished, waiting\",
-    \"player1_id\": 2606.102,
-    \"player2_id\": 40.8925483,
-    \"player1_score\": 10,
-    \"player2_score\": 9
+    \"player1_id\": 42957.7435876,
+    \"player2_id\": 14295.017,
+    \"player1_score\": 3,
+    \"player2_score\": 7
 }"
 </code></pre></div>
 
@@ -787,11 +1111,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const params = {
-    "id": "6",
+    "id": "8",
     "player1_id": "8",
-    "player2_id": "14",
-    "player1_score": "19",
-    "player2_score": "4",
+    "player2_id": "2",
+    "player1_score": "3",
+    "player2_score": "14",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -803,10 +1127,10 @@ const headers = {
 
 let body = {
     "status": "finished, waiting",
-    "player1_id": 2606.102,
-    "player2_id": 40.8925483,
-    "player1_score": 10,
-    "player2_score": 9
+    "player1_id": 42957.7435876,
+    "player2_id": 14295.017,
+    "player1_score": 3,
+    "player2_score": 7
 };
 
 fetch(url, {
@@ -826,36 +1150,26 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;id&quot;: 1,
     &quot;status&quot;: &quot;finished&quot;,
-    &quot;created_at&quot;: &quot;2024-07-22T13:49:30.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;,
-    &quot;players&quot;: [
-        {
-            &quot;id&quot;: 2,
-            &quot;pseudo&quot;: &quot;Dr. Modesto Lakin DDS&quot;,
-            &quot;avatar&quot;: &quot;storage/image/avatars/panda&quot;,
-            &quot;created_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;,
-            &quot;pivot&quot;: {
-                &quot;game_id&quot;: 1,
-                &quot;player_id&quot;: 2,
-                &quot;score&quot;: 10,
-                &quot;win&quot;: 1
-            }
-        },
-        {
-            &quot;id&quot;: 13,
-            &quot;pseudo&quot;: &quot;Jaylan Stehr&quot;,
-            &quot;avatar&quot;: &quot;storage/image/avatars/meerkat&quot;,
-            &quot;created_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-07-30T13:49:30.000000Z&quot;,
-            &quot;pivot&quot;: {
-                &quot;game_id&quot;: 1,
-                &quot;player_id&quot;: 13,
-                &quot;score&quot;: 8,
-                &quot;win&quot;: 0
-            }
-        }
-    ]
+    &quot;player1_id&quot;: 5,
+    &quot;player2_id&quot;: 4,
+    &quot;player1_score&quot;: 10,
+    &quot;player2_score&quot;: 7,
+    &quot;created_at&quot;: &quot;2024-07-23T10:08:41.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+    &quot;player1&quot;: {
+        &quot;id&quot;: 5,
+        &quot;pseudo&quot;: &quot;Miss Ena Thiel&quot;,
+        &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+    },
+    &quot;player2&quot;: {
+        &quot;id&quot;: 4,
+        &quot;pseudo&quot;: &quot;Mike Pouros&quot;,
+        &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -951,10 +1265,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-game--id-"
-               value="6"
+               value="8"
                data-component="query">
     <br>
-<p>The id of the game Example: <code>6</code></p>
+<p>The id of the game Example: <code>8</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>player1_id</code></b>&nbsp;&nbsp;
@@ -973,10 +1287,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="player2_id"                data-endpoint="PUTapi-game--id-"
-               value="14"
+               value="2"
                data-component="query">
     <br>
-<p>The id of the second player Example: <code>14</code></p>
+<p>The id of the second player Example: <code>2</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>player1_score</code></b>&nbsp;&nbsp;
@@ -984,10 +1298,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="player1_score"                data-endpoint="PUTapi-game--id-"
-               value="19"
+               value="3"
                data-component="query">
     <br>
-<p>The score of the first player. Min : 0, Max : 10 Example: <code>19</code></p>
+<p>The score of the first player. Min : 0, Max : 10 Example: <code>3</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>player2_score</code></b>&nbsp;&nbsp;
@@ -995,10 +1309,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="player2_score"                data-endpoint="PUTapi-game--id-"
-               value="4"
+               value="14"
                data-component="query">
     <br>
-<p>The score of the second player. Min : 0, Max : 10 Example: <code>4</code></p>
+<p>The score of the second player. Min : 0, Max : 10 Example: <code>14</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1018,10 +1332,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="player1_id"                data-endpoint="PUTapi-game--id-"
-               value="2606.102"
+               value="42957.7435876"
                data-component="body">
     <br>
-<p>Example: <code>2606.102</code></p>
+<p>Example: <code>42957.7435876</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>player2_id</code></b>&nbsp;&nbsp;
@@ -1029,10 +1343,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="player2_id"                data-endpoint="PUTapi-game--id-"
-               value="40.8925483"
+               value="14295.017"
                data-component="body">
     <br>
-<p>Example: <code>40.8925483</code></p>
+<p>Example: <code>14295.017</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>player1_score</code></b>&nbsp;&nbsp;
@@ -1040,10 +1354,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="player1_score"                data-endpoint="PUTapi-game--id-"
-               value="10"
+               value="3"
                data-component="body">
     <br>
-<p>Must be at least 0. Must not be greater than 10. Example: <code>10</code></p>
+<p>Must be at least 0. Must not be greater than 10. Example: <code>3</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>player2_score</code></b>&nbsp;&nbsp;
@@ -1051,10 +1365,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="player2_score"                data-endpoint="PUTapi-game--id-"
-               value="9"
+               value="7"
                data-component="body">
     <br>
-<p>Must be at least 0. Must not be greater than 10. Example: <code>9</code></p>
+<p>Must be at least 0. Must not be greater than 10. Example: <code>7</code></p>
         </div>
         </form>
 
@@ -1071,7 +1385,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/game/1?id=3" \
+    "http://localhost/api/game/1?id=16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1082,7 +1396,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const params = {
-    "id": "3",
+    "id": "16",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1106,10 +1420,28 @@ fetch(url, {
                 <pre>
 
 <code class="language-json" style="max-height: 300px;">{
+    &quot;id&quot;: 1,
     &quot;status&quot;: &quot;finished&quot;,
-    &quot;updated_at&quot;: &quot;2024-07-31T11:00:28.000000Z&quot;,
-    &quot;created_at&quot;: &quot;2024-07-31T11:00:28.000000Z&quot;,
-    &quot;id&quot;: 102
+    &quot;player1_id&quot;: 5,
+    &quot;player2_id&quot;: 4,
+    &quot;player1_score&quot;: 10,
+    &quot;player2_score&quot;: 7,
+    &quot;created_at&quot;: &quot;2024-07-23T10:08:41.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2024-08-01T10:08:42.000000Z&quot;,
+    &quot;player1&quot;: {
+        &quot;id&quot;: 5,
+        &quot;pseudo&quot;: &quot;Miss Ena Thiel&quot;,
+        &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+    },
+    &quot;player2&quot;: {
+        &quot;id&quot;: 4,
+        &quot;pseudo&quot;: &quot;Mike Pouros&quot;,
+        &quot;avatar&quot;: &quot;storage/images/avatars/bear.png&quot;,
+        &quot;created_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-08-01T10:08:41.000000Z&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -1201,10 +1533,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-game--id-"
-               value="3"
+               value="16"
                data-component="query">
     <br>
-<p>The id of the game Example: <code>3</code></p>
+<p>The id of the game Example: <code>16</code></p>
             </div>
                 </form>
 
@@ -1225,7 +1557,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/player?page=7" \
+    --get "http://localhost/api/player?page=16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1236,7 +1568,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const params = {
-    "page": "7",
+    "page": "16",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1479,10 +1811,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-player"
-               value="7"
+               value="16"
                data-component="query">
     <br>
-<p>Each page contain 15 games Example: <code>7</code></p>
+<p>Each page contain 15 games Example: <code>16</code></p>
             </div>
                 </form>
 
@@ -1950,7 +2282,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/player/1?id=11" \
+    "http://localhost/api/player/1?id=5" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1961,7 +2293,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const params = {
-    "id": "11",
+    "id": "5",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -2081,10 +2413,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-player--id-"
-               value="11"
+               value="5"
                data-component="query">
     <br>
-<p>The id of the game Example: <code>11</code></p>
+<p>The id of the game Example: <code>5</code></p>
             </div>
                 </form>
 
@@ -2135,14 +2467,204 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">[
     {
-        &quot;pseudo&quot;: &quot;Sasha Harber&quot;,
-        &quot;games_played&quot;: 7,
+        &quot;pseudo&quot;: &quot;Ms. Mara Lubowitz&quot;,
+        &quot;games_played&quot;: 2,
+        &quot;games_winned&quot;: 2,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 20,
+        &quot;goals_in&quot;: 6,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 14
+    },
+    {
+        &quot;pseudo&quot;: &quot;Mr. Steve Schaefer&quot;,
+        &quot;games_played&quot;: 3,
         &quot;games_winned&quot;: 3,
-        &quot;games_losed&quot;: 4,
-        &quot;goals_out&quot;: 44,
-        &quot;goals_in&quot;: 59,
-        &quot;games_ratio&quot;: 0.42857142857142855,
-        &quot;goals_difference&quot;: -15
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 30,
+        &quot;goals_in&quot;: 24,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 6
+    },
+    {
+        &quot;pseudo&quot;: &quot;Mr. Rodrick Brakus IV&quot;,
+        &quot;games_played&quot;: 2,
+        &quot;games_winned&quot;: 2,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 20,
+        &quot;goals_in&quot;: 9,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 11
+    },
+    {
+        &quot;pseudo&quot;: &quot;Mike Pouros&quot;,
+        &quot;games_played&quot;: 8,
+        &quot;games_winned&quot;: 8,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 80,
+        &quot;goals_in&quot;: 48,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 32
+    },
+    {
+        &quot;pseudo&quot;: &quot;Miss Ena Thiel&quot;,
+        &quot;games_played&quot;: 7,
+        &quot;games_winned&quot;: 7,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 70,
+        &quot;goals_in&quot;: 40,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 30
+    },
+    {
+        &quot;pseudo&quot;: &quot;Era Rath Jr.&quot;,
+        &quot;games_played&quot;: 1,
+        &quot;games_winned&quot;: 1,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 10,
+        &quot;goals_in&quot;: 9,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 1
+    },
+    {
+        &quot;pseudo&quot;: &quot;Harold Smith&quot;,
+        &quot;games_played&quot;: 5,
+        &quot;games_winned&quot;: 5,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 50,
+        &quot;goals_in&quot;: 26,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 24
+    },
+    {
+        &quot;pseudo&quot;: &quot;Dr. Mckenna Rosenbaum V&quot;,
+        &quot;games_played&quot;: 6,
+        &quot;games_winned&quot;: 6,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 60,
+        &quot;goals_in&quot;: 28,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 32
+    },
+    {
+        &quot;pseudo&quot;: &quot;Talon Gulgowski&quot;,
+        &quot;games_played&quot;: 0,
+        &quot;games_winned&quot;: 0,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 0,
+        &quot;goals_in&quot;: 0,
+        &quot;games_ratio&quot;: 0,
+        &quot;goals_difference&quot;: 0
+    },
+    {
+        &quot;pseudo&quot;: &quot;Hector Wiza&quot;,
+        &quot;games_played&quot;: 5,
+        &quot;games_winned&quot;: 5,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 50,
+        &quot;goals_in&quot;: 28,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 22
+    },
+    {
+        &quot;pseudo&quot;: &quot;Melissa Bruen&quot;,
+        &quot;games_played&quot;: 7,
+        &quot;games_winned&quot;: 7,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 70,
+        &quot;goals_in&quot;: 56,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 14
+    },
+    {
+        &quot;pseudo&quot;: &quot;Okey Walter&quot;,
+        &quot;games_played&quot;: 7,
+        &quot;games_winned&quot;: 7,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 70,
+        &quot;goals_in&quot;: 12,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 58
+    },
+    {
+        &quot;pseudo&quot;: &quot;Ms. Nina Hill&quot;,
+        &quot;games_played&quot;: 3,
+        &quot;games_winned&quot;: 3,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 30,
+        &quot;goals_in&quot;: 22,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 8
+    },
+    {
+        &quot;pseudo&quot;: &quot;Prof. Austen Satterfield&quot;,
+        &quot;games_played&quot;: 8,
+        &quot;games_winned&quot;: 8,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 80,
+        &quot;goals_in&quot;: 41,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 39
+    },
+    {
+        &quot;pseudo&quot;: &quot;Carlotta Hettinger&quot;,
+        &quot;games_played&quot;: 3,
+        &quot;games_winned&quot;: 3,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 30,
+        &quot;goals_in&quot;: 18,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 12
+    },
+    {
+        &quot;pseudo&quot;: &quot;Alek Stracke MD&quot;,
+        &quot;games_played&quot;: 7,
+        &quot;games_winned&quot;: 7,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 70,
+        &quot;goals_in&quot;: 24,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 46
+    },
+    {
+        &quot;pseudo&quot;: &quot;Jamison Kemmer&quot;,
+        &quot;games_played&quot;: 4,
+        &quot;games_winned&quot;: 4,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 40,
+        &quot;goals_in&quot;: 19,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 21
+    },
+    {
+        &quot;pseudo&quot;: &quot;Mr. Lee Willms I&quot;,
+        &quot;games_played&quot;: 3,
+        &quot;games_winned&quot;: 3,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 30,
+        &quot;goals_in&quot;: 15,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 15
+    },
+    {
+        &quot;pseudo&quot;: &quot;Evert Bashirian DDS&quot;,
+        &quot;games_played&quot;: 10,
+        &quot;games_winned&quot;: 10,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 100,
+        &quot;goals_in&quot;: 57,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 43
+    },
+    {
+        &quot;pseudo&quot;: &quot;Polly O&#039;Connell III&quot;,
+        &quot;games_played&quot;: 9,
+        &quot;games_winned&quot;: 9,
+        &quot;games_losed&quot;: 0,
+        &quot;goals_out&quot;: 90,
+        &quot;goals_in&quot;: 52,
+        &quot;games_ratio&quot;: 1,
+        &quot;goals_difference&quot;: 38
     }
 ]</code>
  </pre>

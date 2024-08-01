@@ -30,20 +30,20 @@ endpoints:
         name: page
         description: 'Each page contain 15 games'
         required: true
-        example: 1
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      page: 1
+      page: 9
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"current_page":1,"data":[{"id":1,"status":"finished","created_at":"2024-07-22T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":2,"status":"finished","created_at":"2024-07-25T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":3,"status":"finished","created_at":"2024-07-29T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":4,"status":"finished","created_at":"2024-07-22T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":5,"status":"finished","created_at":"2024-07-20T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":6,"status":"finished","created_at":"2024-07-28T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":7,"status":"finished","created_at":"2024-07-28T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":8,"status":"finished","created_at":"2024-07-23T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":9,"status":"finished","created_at":"2024-07-29T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":10,"status":"finished","created_at":"2024-07-29T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":11,"status":"finished","created_at":"2024-07-23T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":12,"status":"finished","created_at":"2024-07-21T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":13,"status":"finished","created_at":"2024-07-26T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":14,"status":"finished","created_at":"2024-07-28T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"},{"id":15,"status":"finished","created_at":"2024-07-24T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/game?page=1","from":1,"last_page":7,"last_page_url":"http:\/\/localhost\/api\/game?page=7","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/game?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/game?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/game?page=3","label":"3","active":false},{"url":"http:\/\/localhost\/api\/game?page=4","label":"4","active":false},{"url":"http:\/\/localhost\/api\/game?page=5","label":"5","active":false},{"url":"http:\/\/localhost\/api\/game?page=6","label":"6","active":false},{"url":"http:\/\/localhost\/api\/game?page=7","label":"7","active":false},{"url":"http:\/\/localhost\/api\/game?page=2","label":"Next &raquo;","active":false}],"next_page_url":"http:\/\/localhost\/api\/game?page=2","path":"http:\/\/localhost\/api\/game","per_page":15,"prev_page_url":null,"to":15,"total":100}'
+        content: '[{"id":1,"status":"finished","player1_id":5,"player2_id":4,"player1_score":10,"player2_score":7,"created_at":"2024-07-23T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":5,"pseudo":"Miss Ena Thiel","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":4,"pseudo":"Mike Pouros","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":2,"status":"finished","player1_id":8,"player2_id":6,"player1_score":10,"player2_score":2,"created_at":"2024-07-30T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":8,"pseudo":"Dr. Mckenna Rosenbaum V","avatar":"storage\/images\/avatars\/chicken.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":6,"pseudo":"Era Rath Jr.","avatar":"storage\/images\/avatars\/meerkat.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":3,"status":"finished","player1_id":5,"player2_id":11,"player1_score":10,"player2_score":4,"created_at":"2024-07-27T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":5,"pseudo":"Miss Ena Thiel","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":11,"pseudo":"Melissa Bruen","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":4,"status":"finished","player1_id":16,"player2_id":11,"player1_score":10,"player2_score":1,"created_at":"2024-07-29T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":16,"pseudo":"Alek Stracke MD","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":11,"pseudo":"Melissa Bruen","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":5,"status":"finished","player1_id":18,"player2_id":20,"player1_score":10,"player2_score":4,"created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":18,"pseudo":"Mr. Lee Willms I","avatar":"storage\/images\/avatars\/panda.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":20,"pseudo":"Polly O''Connell III","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":6,"status":"finished","player1_id":20,"player2_id":16,"player1_score":10,"player2_score":8,"created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":20,"pseudo":"Polly O''Connell III","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":16,"pseudo":"Alek Stracke MD","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":7,"status":"finished","player1_id":2,"player2_id":10,"player1_score":10,"player2_score":9,"created_at":"2024-07-29T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":2,"pseudo":"Mr. Steve Schaefer","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":10,"pseudo":"Hector Wiza","avatar":"storage\/images\/avatars\/chicken.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":8,"status":"finished","player1_id":11,"player2_id":20,"player1_score":10,"player2_score":9,"created_at":"2024-07-22T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":11,"pseudo":"Melissa Bruen","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":20,"pseudo":"Polly O''Connell III","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":9,"status":"finished","player1_id":2,"player2_id":5,"player1_score":10,"player2_score":7,"created_at":"2024-07-25T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":2,"pseudo":"Mr. Steve Schaefer","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":5,"pseudo":"Miss Ena Thiel","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":10,"status":"finished","player1_id":16,"player2_id":5,"player1_score":10,"player2_score":3,"created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":16,"pseudo":"Alek Stracke MD","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":5,"pseudo":"Miss Ena Thiel","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":11,"status":"finished","player1_id":7,"player2_id":2,"player1_score":10,"player2_score":8,"created_at":"2024-07-22T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":7,"pseudo":"Harold Smith","avatar":"storage\/images\/avatars\/astronaut.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":2,"pseudo":"Mr. Steve Schaefer","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":12,"status":"finished","player1_id":2,"player2_id":5,"player1_score":10,"player2_score":8,"created_at":"2024-07-22T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":2,"pseudo":"Mr. Steve Schaefer","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":5,"pseudo":"Miss Ena Thiel","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":13,"status":"finished","player1_id":4,"player2_id":14,"player1_score":10,"player2_score":9,"created_at":"2024-07-28T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":4,"pseudo":"Mike Pouros","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":14,"pseudo":"Prof. Austen Satterfield","avatar":"storage\/images\/avatars\/chicken.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":14,"status":"finished","player1_id":18,"player2_id":16,"player1_score":10,"player2_score":8,"created_at":"2024-07-28T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":18,"pseudo":"Mr. Lee Willms I","avatar":"storage\/images\/avatars\/panda.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":16,"pseudo":"Alek Stracke MD","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}},{"id":15,"status":"finished","player1_id":20,"player2_id":1,"player1_score":10,"player2_score":4,"created_at":"2024-07-24T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":20,"pseudo":"Polly O''Connell III","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":1,"pseudo":"Ms. Mara Lubowitz","avatar":"storage\/images\/avatars\/panda.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}}]'
         headers: []
         description: ''
         custom: []
@@ -73,8 +73,48 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
+    queryParameters:
+      player1_id:
+        name: player1_id
+        description: 'The id of the first player'
+        required: true
+        example: 15
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player2_id:
+        name: player2_id
+        description: 'The id of the second player'
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player1_score:
+        name: player1_score
+        description: 'The score of the first player. Min : 0, Max : 10'
+        required: false
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player2_score:
+        name: player2_score
+        description: 'The score of the second player. Min : 0, Max : 10'
+        required: false
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      player1_id: 15
+      player2_id: 6
+      player1_score: 11
+      player2_score: 11
     bodyParameters:
       status:
         name: status
@@ -85,13 +125,53 @@ endpoints:
         enumValues: []
         exampleWasSpecified: true
         custom: []
+      player1_id:
+        name: player1_id
+        description: ''
+        required: true
+        example: 733683.88037
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player2_id:
+        name: player2_id
+        description: ''
+        required: true
+        example: 528237.96
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player1_score:
+        name: player1_score
+        description: 'Must be at least 0. Must not be greater than 10.'
+        required: false
+        example: 4
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      player2_score:
+        name: player2_score
+        description: 'Must be at least 0. Must not be greater than 10.'
+        required: false
+        example: 6
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
     cleanBodyParameters:
       status: 'finished, waiting'
+      player1_id: 733683.88037
+      player2_id: 528237.96
+      player1_score: 4
+      player2_score: 6
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"status":"finished","updated_at":"2024-07-31T11:00:28.000000Z","created_at":"2024-07-31T11:00:28.000000Z","id":102}'
+        content: '{"id":1,"status":"finished","player1_id":5,"player2_id":4,"player1_score":10,"player2_score":7,"created_at":"2024-07-23T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":5,"pseudo":"Miss Ena Thiel","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":4,"pseudo":"Mike Pouros","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}}'
         headers: []
         description: ''
         custom: []
@@ -136,20 +216,20 @@ endpoints:
         name: id
         description: 'The id of the game'
         required: true
-        example: 8
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      id: 8
+      id: 20
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"id":1,"status":"finished","created_at":"2024-07-22T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","players":[{"id":2,"pseudo":"Dr. Modesto Lakin DDS","avatar":"storage\/image\/avatars\/panda","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","pivot":{"game_id":1,"player_id":2,"score":10,"win":1}},{"id":13,"pseudo":"Jaylan Stehr","avatar":"storage\/image\/avatars\/meerkat","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","pivot":{"game_id":1,"player_id":13,"score":8,"win":0}}]}'
+        content: '{"id":1,"status":"finished","player1_id":5,"player2_id":4,"player1_score":10,"player2_score":7,"created_at":"2024-07-23T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":5,"pseudo":"Miss Ena Thiel","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":4,"pseudo":"Mike Pouros","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}}'
         headers: []
         description: ''
         custom: []
@@ -195,7 +275,7 @@ endpoints:
         name: id
         description: 'The id of the game'
         required: true
-        example: 6
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -213,7 +293,7 @@ endpoints:
         name: player2_id
         description: 'The id of the second player'
         required: true
-        example: 14
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -222,7 +302,7 @@ endpoints:
         name: player1_score
         description: 'The score of the first player. Min : 0, Max : 10'
         required: false
-        example: 19
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -231,17 +311,17 @@ endpoints:
         name: player2_score
         description: 'The score of the second player. Min : 0, Max : 10'
         required: false
-        example: 4
+        example: 14
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      id: 6
+      id: 8
       player1_id: 8
-      player2_id: 14
-      player1_score: 19
-      player2_score: 4
+      player2_id: 2
+      player1_score: 3
+      player2_score: 14
     bodyParameters:
       status:
         name: status
@@ -256,7 +336,7 @@ endpoints:
         name: player1_id
         description: ''
         required: true
-        example: 2606.102
+        example: 42957.7435876
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -265,7 +345,7 @@ endpoints:
         name: player2_id
         description: ''
         required: true
-        example: 40.8925483
+        example: 14295.017
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -274,7 +354,7 @@ endpoints:
         name: player1_score
         description: 'Must be at least 0. Must not be greater than 10.'
         required: false
-        example: 10
+        example: 3
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -283,22 +363,22 @@ endpoints:
         name: player2_score
         description: 'Must be at least 0. Must not be greater than 10.'
         required: false
-        example: 9
+        example: 7
         type: number
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
       status: 'finished, waiting'
-      player1_id: 2606.102
-      player2_id: 40.8925483
-      player1_score: 10
-      player2_score: 9
+      player1_id: 42957.7435876
+      player2_id: 14295.017
+      player1_score: 3
+      player2_score: 7
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"id":1,"status":"finished","created_at":"2024-07-22T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","players":[{"id":2,"pseudo":"Dr. Modesto Lakin DDS","avatar":"storage\/image\/avatars\/panda","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","pivot":{"game_id":1,"player_id":2,"score":10,"win":1}},{"id":13,"pseudo":"Jaylan Stehr","avatar":"storage\/image\/avatars\/meerkat","created_at":"2024-07-30T13:49:30.000000Z","updated_at":"2024-07-30T13:49:30.000000Z","pivot":{"game_id":1,"player_id":13,"score":8,"win":0}}]}'
+        content: '{"id":1,"status":"finished","player1_id":5,"player2_id":4,"player1_score":10,"player2_score":7,"created_at":"2024-07-23T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":5,"pseudo":"Miss Ena Thiel","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":4,"pseudo":"Mike Pouros","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}}'
         headers: []
         description: ''
         custom: []
@@ -343,20 +423,20 @@ endpoints:
         name: id
         description: 'The id of the game'
         required: true
-        example: 3
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      id: 3
+      id: 16
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"status":"finished","updated_at":"2024-07-31T11:00:28.000000Z","created_at":"2024-07-31T11:00:28.000000Z","id":102}'
+        content: '{"id":1,"status":"finished","player1_id":5,"player2_id":4,"player1_score":10,"player2_score":7,"created_at":"2024-07-23T10:08:41.000000Z","updated_at":"2024-08-01T10:08:42.000000Z","player1":{"id":5,"pseudo":"Miss Ena Thiel","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"},"player2":{"id":4,"pseudo":"Mike Pouros","avatar":"storage\/images\/avatars\/bear.png","created_at":"2024-08-01T10:08:41.000000Z","updated_at":"2024-08-01T10:08:41.000000Z"}}'
         headers: []
         description: ''
         custom: []
